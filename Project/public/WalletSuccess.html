@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Created Success - Snake Energy</title>
+    <link rel="stylesheet" href="CSS/WalletSuccess.css">
+    <link rel="stylesheet" href="CSS/lang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="langSwitcher" style="position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10;">
+        <button id="languageToggle">VI</button>
+    </div>
+    
+    <div class="header">
+        <div class="header-left">
+            <i class="fa-solid fa-wallet"></i> <span data-i18n="walletCreatedSuccess">Wallet Created Success</span>
+        </div>
+        <div class="header-right">
+            <span data-i18n="systemTime">SYSTEM TIME</span><br>
+            <span><span id="currentDate"></span> // <span id="currentTime"></span> UTC</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="dashed-circle"></div>
+        
+        <div class="orb-container">
+            <div class="orb"></div>
+            <div class="status-badge">
+                <span style="color: #777799; font-weight: normal;" data-i18n="status">STATUS</span>
+                <span data-i18n="energized">ENERGIZED</span>
+            </div>
+        </div>
+
+        <div class="title" data-i18n="walletInitialized">Wallet Initialized</div>
+        <div class="subtitle" data-i18n="walletInitializedSub">
+            The Ouroboros core has stabilized. Your digital identity is now anchored to the Snake Energy network.
+        </div>
+
+        <div class="cards-container">
+            <div class="info-card">
+                <h3 data-i18n="primaryAddress">PRIMARY ADDRESS</h3>
+                <div class="value">0x71C...3a4b</div>
+                <div class="sub-value"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="encryptedL2">ENCRYPTED ON L2</span></div>
+            </div>
+            <div class="info-card">
+                <h3 data-i18n="initialEnergy">INITIAL ENERGY</h3>
+                <div class="value">0.00 <span>SNK</span></div>
+                <div class="progress-bar"><div class="fill"></div></div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="/Homepage.html" class="btn-primary">
+                <span data-i18n="enterDashboard">Enter the Dashboard</span> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span data-i18n="securityProtocol">SECURITY PROTOCOL: ALPHA-SIGMA-9 SECURE</span>
+    </div>
+    <div class="footer-left">
+        <div class="dot active"></div><div class="dot active"></div><div class="dot"></div>
+        <span data-i18n="nodeConnected">OUROBOROS NODE CONNECTED</span>
+    </div>
+
+    <script src="lang.js"></script>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const dateStr = now.toISOString().split('T')[0].replace(/-/g, '.');
+            const timeStr = now.toISOString().split('T')[1].split('.')[0];
+            document.getElementById('currentDate').innerText = dateStr;
+            document.getElementById('currentTime').innerText = timeStr;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>

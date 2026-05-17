@@ -1,0 +1,174 @@
+
+body {
+  margin: 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0d0d1a, #1a0033, #001f4d);
+  color: #e0e0ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+i {
+  font-size: 0.85rem;
+  color: #b3b3cc;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.left {
+  flex: 1;
+  padding: 40px;
+  text-align: left;
+}
+
+.formHeader {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #4b4bda, #8740c9, #265aa8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.left p {
+  font-size: 1rem;
+  color: #b3b3cc;
+  margin-top: 10px;
+}
+
+.seedSecurity {
+  margin-top: 40px;
+  background: rgba(20, 20, 40, 0.85);
+  padding: 5px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(166, 77, 255, 0.4);
+  border-left: solid 5px red;
+  border-top: solid 1px red;
+}
+
+.seedSecurity h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.seedSecurity p {
+  font-size: 0.9rem;
+  color: #b3b3cc;
+  line-height: 1.4;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  background: rgba(20, 20, 40, 0.85);
+  border-radius: 12px;
+  padding: 30px;
+  width: 600px;
+  box-shadow: 0 0 20px rgba(166, 77, 255, 0.6);
+}
+
+.signUp {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 50px 20px 10px;
+}
+.signUpField {
+  text-align: left;
+  font-size: 0.8rem;
+  color: #a6a6d2;
+  margin-bottom: 10px;
+}
+
+.signUp input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #1a1a33;
+  color: whitesmoke;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.signUp input:focus {
+  box-shadow: 0 0 8px #a64dff;
+}
+.acknowledge {
+  grid-column: span 2;
+  margin: 20px;
+}
+
+#policy {
+  color: #a64dff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#policy:hover {
+  text-decoration: underline;
+}
+
+#createWallet {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #7c43b5, #4d94ff);
+  border: none;
+  border-radius: 30px;
+  color: #080808;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  grid-column: span 2;
+  font-size: 20px;
+}
+
+#createWallet:hover {
+  transform: scale(1.05);
+}
+button i{
+    color: black;
+    font-size: 20px;
+}
+
+.login {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 5px;
+  grid-column: span 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.login a {
+  color: #a64dff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+
+.subDes {
+  font-size: 0.8rem;
+  color: #56567d;
+  letter-spacing: 4px;
+  font-style: italic;
+}

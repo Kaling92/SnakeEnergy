@@ -1,0 +1,187 @@
+/* EXPLORE VAULTS PAGE STYLES */
+
+body {
+    background: radial-gradient(circle at top left, #120a2a, #070714 60%) !important;
+}
+
+.right {
+    background: #111128 !important;
+}
+
+.vaultsContainer {
+    padding: 15px 15px;
+    max-width: 1400px;
+    width: 95%;
+    margin: auto;
+}
+
+/* HERO SECTION */
+.heroCard {
+    background: rgba(30, 20, 50, 0.4);
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    margin-bottom: 40px;
+}
+
+.heroLeft h1 {
+    font-size: 42px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.heroLeft p {
+    color: #6b6b99;
+    font-size: 11px;
+    max-width: 400px;
+    line-height: 1.6;
+    margin: 15px 0 30px;
+}
+
+.heroStats {
+    display: flex;
+    gap: 30px;
+}
+
+.hStat label { font-size: 9px; color: #6b6b99; font-weight: 800; display: block; margin-bottom: 5px; }
+.hStat p { font-size: 24px; font-weight: 900; margin: 0; }
+
+/* PERFORMANCE CHART */
+.heroRight {
+    background: rgba(20, 20, 40, 0.6);
+    padding: 24px;
+    border-radius: 20px;
+    width: 320px;
+}
+
+.chartHeader { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.chartHeader h4 { font-size: 9px; color: #6b6b99; margin: 0; }
+.chartHeader h2 { font-size: 24px; color: #00e0ff; margin: 5px 0 0; }
+
+.barChart {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    height: 80px;
+}
+
+.bar {
+    flex: 1;
+    background: rgba(166, 77, 255, 0.2);
+    border-radius: 4px;
+}
+
+.bar.active {
+    background: linear-gradient(to top, #de8aff, #00e0ff);
+}
+
+/* TABS */
+.tabRow {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 15px;
+}
+
+.tab {
+    font-size: 11px;
+    font-weight: 800;
+    color: #6b6b99;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.tab.active { color: #fff; position: relative; }
+.tab.active::after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #00e0ff;
+}
+
+/* VAULT CARDS */
+.vaultGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.vCard {
+    background: rgba(40, 40, 70, 0.4);
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.vCard:hover { background: rgba(50, 50, 80, 0.5); transform: translateY(-5px); }
+
+.vIcon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.vCard h3 { margin: 0; font-size: 20px; }
+.vCard .vDesc { font-size: 10px; color: #6b6b99; margin: 8px 0 25px; line-height: 1.4; }
+
+.vMetrics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.vMetric label { font-size: 9px; color: #6b6b99; display: block; margin-bottom: 5px; }
+.vMetric p { font-size: 16px; font-weight: 800; margin: 0; }
+
+.riskRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    color: #6b6b99;
+    margin-bottom: 30px;
+}
+
+.riskDots { display: flex; gap: 4px; }
+.dot { width: 12px; height: 3px; border-radius: 2px; background: rgba(255, 255, 255, 0.1); }
+.dot.fill { background: #00e0ff; }
+
+.depositBtn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.depositBtn:hover { background: #fff; color: #0b0a1f; }
+
+/* FOOTER STATS */
+.footerStats {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(20, 20, 40, 0.4);
+    padding: 24px;
+    border-radius: 20px;
+}
+
+.fStat label { font-size: 9px; color: #6b6b99; font-weight: 800; display: block; margin-bottom: 8px; }
+.fStat p { font-size: 18px; font-weight: 900; margin: 0; }

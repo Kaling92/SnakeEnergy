@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Vaults | Snake Energy</title>
+    <link rel="stylesheet" href="CSS/Homepage.css" />
+    <link rel="stylesheet" href="CSS/ExploreVaults.css" />
+    <link rel="stylesheet" href="CSS/lang.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <!-- LEFT SIDEBAR -->
+    <div class="left">
+      <div class="title">Snake Energy</div>
+      
+      <div class="profile">
+        <div><img id="userPhoto" src="CSS/user.png" /></div>
+        <div id="userProfile">
+          <label data-i18n="userProfile">User Profile</label>
+          <p id="phoneNumber">0913108937</p>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div id="menuDashboard" class="menuItem" data-i18n="menuDashboard"><i class="fa-solid fa-th"></i> Dashboard</div>
+        <div id="menuAssets" class="menuItem active" data-i18n="menuAssets"><i class="fa-solid fa-wallet"></i> Assets</div>
+        <div id="menuSwap" class="menuItem" data-i18n="menuSwap"><i class="fa-solid fa-arrow-right-arrow-left"></i> Swap</div>
+        <div id="menuAnalytics" class="menuItem" data-i18n="menuAnalytics"><i class="fa-solid fa-chart-line"></i> Analytics</div>
+        <div id="menuNFT" class="menuItem" data-i18n="menuNFT"><i class="fa-solid fa-gem"></i> NFTs</div>
+        <div id="menuTransactions" class="menuItem" data-i18n="menuTransactions"><i class="fa-solid fa-clock-rotate-left"></i> Transactions</div>
+        <div id="menuNotifications" class="menuItem" data-i18n="menuNotifications"><i class="fa-solid fa-bell"></i> Notifications</div>
+        <div id="menuSecurity" class="menuItem" data-i18n="menuSecurity"><i class="fa-solid fa-shield"></i> Security</div>
+        <div id="menuSettings" class="menuItem" data-i18n="menuSettings"><i class="fa-solid fa-gear"></i> Settings</div>
+      </div>
+      <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> <span data-i18n="logout">Log out</span></button>
+    </div>
+
+    <!-- MAIN RIGHT CONTENT -->
+    <div class="right">
+      <div class="rightHeader">
+        <div class="rightHeaderLeft">
+          <input id="searchBar" type="text" placeholder="Search strategies or assets..." />
+          <div class="langSwitcher">
+            <button id="languageToggle">VI</button>
+          </div>
+        </div>
+        <div class="rightHeaderRight">
+          <div class="headerRightButton">
+            <button id="receive">Receive</button>
+            <button id="send">Send</button>
+          </div>
+          <div class="bell" id="bellIcon"><i class="fa-solid fa-bell"></i></div>
+          <div class="wallet" id="walletIcon"><i class="fa-solid fa-wallet"></i></div>
+        </div>
+      </div>
+
+      <div class="vaultsContainer">
+        <!-- Hero Section -->
+        <div class="heroCard">
+            <div class="heroLeft">
+                <p style="color: #00e0ff; letter-spacing: 2px; font-weight: bold; margin: 0; font-size: 10px;">OPTIMIZED YIELD ENGINE</p>
+                <h1 class="pageTitle"><span style="color: #de8aff;">YIELD</span> NEBULA</h1>
+                <p>Navigate the high-efficiency liquidity streams of the Snake ecosystem. Real-time yield discovery with cinematic precision.</p>
+                
+                <div class="heroStats">
+                    <div class="hStat">
+                        <label>GLOBAL TVL</label>
+                        <p>$1.42B</p>
+                    </div>
+                    <div class="hStat">
+                        <label>YIELD PULSE</label>
+                        <p style="color: #00e0ff;">18.4% <i class="fa-solid fa-arrow-trend-up" style="font-size: 14px;"></i></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="heroRight">
+                <div class="chartHeader">
+                    <div>
+                        <h4>SNAKE YIELD PERFORMANCE</h4>
+                        <h2>84.22%</h2>
+                    </div>
+                    <span style="font-size: 10px; color: #05c46b; font-weight: bold;">+4.12%</span>
+                </div>
+                <div class="barChart">
+                    <div class="bar" style="height: 30%;"></div>
+                    <div class="bar" style="height: 45%;"></div>
+                    <div class="bar" style="height: 35%;"></div>
+                    <div class="bar" style="height: 60%;"></div>
+                    <div class="bar" style="height: 80%;"></div>
+                    <div class="bar active" style="height: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="tabRow">
+            <div class="tab active">ALL VAULTS</div>
+            <div class="tab">STABLECOINS</div>
+            <div class="tab">AGGRESSIVE</div>
+            <div class="tab">LENDING</div>
+        </div>
+
+        <!-- Vault Grid -->
+        <div class="vaultGrid">
+            <!-- Snake Yield -->
+            <div class="vCard">
+                <div class="vIcon" style="background: rgba(166, 77, 255, 0.1); color: #a64dff;"><i class="fa-solid fa-bolt"></i></div>
+                <span style="background: rgba(0, 224, 255, 0.1); color: #00e0ff; font-size: 8px; font-weight: bold; padding: 2px 6px; border-radius: 4px; float: right;">ACTIVE BOOSTER</span>
+                <h3>Snake Yield</h3>
+                <p class="vDesc">Delta-neutral liquidity optimization strategy.</p>
+                <div class="vMetrics">
+                    <div class="vMetric"><label>CURRENT APY</label><p style="color: #00e0ff;">32.4%</p></div>
+                    <div class="vMetric"><label>TOTAL TVL</label><p>$42.8M</p></div>
+                </div>
+                <div class="riskRow">
+                    <div style="display: flex; align-items: center; gap: 8px;">RISK SCORE <div class="riskDots"><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot"></div></div></div>
+                    <span>ETH / USDC</span>
+                </div>
+                <button class="depositBtn">DEPOSIT FUNDS</button>
+            </div>
+
+            <!-- Lending Pools -->
+            <div class="vCard">
+                <div class="vIcon" style="background: rgba(0, 224, 255, 0.1); color: #00e0ff;"><i class="fa-solid fa-landmark"></i></div>
+                <span style="background: rgba(255, 255, 255, 0.05); color: #6b6b99; font-size: 8px; font-weight: bold; padding: 2px 6px; border-radius: 4px; float: right;">LOW VOLATILITY</span>
+                <h3>Lending Pools</h3>
+                <p class="vDesc">Institutional grade lending for stable yields.</p>
+                <div class="vMetrics">
+                    <div class="vMetric"><label>CURRENT APY</label><p style="color: #de8aff;">8.12%</p></div>
+                    <div class="vMetric"><label>TOTAL TVL</label><p>$124.5M</p></div>
+                </div>
+                <div class="riskRow">
+                    <div style="display: flex; align-items: center; gap: 8px;">RISK SCORE <div class="riskDots"><div class="dot fill"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+                    <span>USDT / DAI</span>
+                </div>
+                <button class="depositBtn">DEPOSIT FUNDS</button>
+            </div>
+
+            <!-- Liquidity Prov. -->
+            <div class="vCard">
+                <div class="vIcon" style="background: rgba(255, 77, 109, 0.1); color: #ff4d6d;"><i class="fa-solid fa-droplet"></i></div>
+                <span style="background: rgba(255, 171, 0, 0.1); color: #ffab00; font-size: 8px; font-weight: bold; padding: 2px 6px; border-radius: 4px; float: right;">HIGH APY</span>
+                <h3>Liquidity Prov.</h3>
+                <p class="vDesc">Market making strategies across DEX pools.</p>
+                <div class="vMetrics">
+                    <div class="vMetric"><label>CURRENT APY</label><p style="color: #ff4d6d;">54.8%</p></div>
+                    <div class="vMetric"><label>TOTAL TVL</label><p>$12.1M</p></div>
+                </div>
+                <div class="riskRow">
+                    <div style="display: flex; align-items: center; gap: 8px;">RISK SCORE <div class="riskDots"><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div><div class="dot fill"></div></div></div>
+                    <span>SOL / SNAKE</span>
+                </div>
+                <button class="depositBtn">DEPOSIT FUNDS</button>
+            </div>
+        </div>
+
+        <!-- Footer Stats -->
+        <div class="footerStats">
+            <div class="fStat">
+                <label>TOTAL VALUE LOCKED</label>
+                <p>$1,421,984,203</p>
+            </div>
+            <div class="fStat">
+                <label>TOTAL YIELD PAID</label>
+                <p style="color: #00e0ff;">$84,120,551</p>
+            </div>
+            <div class="fStat">
+                <label>ACTIVE WALLETS</label>
+                <p>12,402</p>
+            </div>
+            <div class="fStat">
+                <label>SNAKE BURN (24H)</label>
+                <p style="color: #de8aff;">842,100 SNK</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="lang.js"></script>
+    <script>
+      // SIMPLE SCRIPT FOR EXPLORE VAULTS
+      async function updateVaultData() {
+        try {
+          // 1. Fetch market data
+          const response = await fetch('https://api.coingecko.com/api/v3/coins/ethereum');
+          const data = await response.json();
+          
+          // 2. Update Performance based on ETH 24h change
+          const change = data.market_data.price_change_percentage_24h;
+          const perfTitle = document.querySelector('.chartHeader h2');
+          const perfPercent = document.querySelector('.chartHeader span');
+          
+          if(perfTitle) perfTitle.textContent = (84.22 + (change/10)).toFixed(2) + '%';
+          if(perfPercent) perfPercent.textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
+          
+          // 3. Update TVL mock update
+          const tvlText = document.querySelector('.fStat:first-child p');
+          if(tvlText) {
+            const baseTVL = 1421984203;
+            tvlText.textContent = '$' + (baseTVL + (change * 100000)).toLocaleString();
+          }
+        } catch (e) {
+          console.log("Error loading vault data");
+        }
+      }
+
+      // SIMPLE TAB SWITCHING
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.onclick = function() {
+          document.querySelector('.tab.active').classList.remove('active');
+          this.classList.add('active');
+        };
+      });
+
+      // SIMPLE DEPOSIT BUTTON INTERACTION
+      document.querySelectorAll('.depositBtn').forEach(btn => {
+        btn.onclick = function() {
+          const originalText = this.innerText;
+          this.innerText = "Processing...";
+          this.style.background = "#de8aff";
+          this.style.color = "#000";
+          
+          setTimeout(() => {
+            this.innerText = "SUCCESS!";
+            this.style.background = "#05c46b";
+            setTimeout(() => {
+              this.innerText = originalText;
+              this.style.background = "";
+              this.style.color = "";
+            }, 2000);
+          }, 1500);
+        };
+      });
+
+      updateVaultData();
+    </script>
+</body>
+</html>

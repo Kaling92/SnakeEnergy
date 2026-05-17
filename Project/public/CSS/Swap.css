@@ -1,0 +1,221 @@
+/* RIGHT PANEL */
+.righPanel {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TITLE */
+.swapTitle h1 {
+  font-size: 42px;
+  font-weight: bold;
+  background: linear-gradient(to right, #e0e0ff, #a64dff, #00dbe9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.swapTitle p {
+  font-size: 0.8rem;
+  color: #8b8bb3;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* MAIN CARD */
+.container {
+  width: 500px;
+  background: rgba(20, 20, 40, 0.4);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 10px 10px 40px 40px rgba(166, 77, 255, 0.25);
+  backdrop-filter: blur(100px);
+  margin: 20px;
+}
+
+/* HEADER */
+.transactionRoute {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.transactionRoute p {
+  font-size: 0.7rem;
+  color: #6b6b99;
+  letter-spacing: 1px;
+}
+
+.transactionRoute i {
+  color: #a64dff;
+  cursor: pointer;
+}
+
+/* COMMON BOX */
+.from,
+.to {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #151530;
+  border-radius: 14px;
+  padding: 15px;
+  margin: 30px;
+}
+
+/* LEFT SIDE */
+.fromNameandAmount p:first-child,
+.toNameandAmount p:first-child {
+  font-size: 0.7rem;
+  color: #6b6b99;
+  margin-bottom: 6px;
+}
+
+#fromAmount,
+#toAmount {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+#usdEqual,
+.fromEqualTo {
+  font-size: 0.75rem;
+  color: #777799;
+}
+
+/* RIGHT SIDE */
+.crypType {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  justify-content: center;
+}
+
+.crypType div:first-child {
+  display: flex;
+  gap: 4px;
+  font-size: 0.7rem;
+  color: #777799;
+}
+
+.cryptoDropdown {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #0f0f25;
+  padding: 12px 14px;
+  border-radius: 8px;
+}
+
+.cryptoDropdown select,
+option {
+  background: transparent;
+  border: none;
+  color: rgb(220, 217, 7);
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: #0f0f25;
+}
+
+/* SWITCH ICON WRAPPER */
+.switchIcon {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #a64dff, #4d94ff);
+  border-radius: 50%;
+  border: solid 10px rgb(23, 12, 45);
+}
+.switchIcon i {
+  font-size: 26px;
+  color: white;
+}
+
+.switchIcon:hover {
+  transform: translate(-50%, -50%) scale(0.9);
+  box-shadow: 0 0 12px rgba(166, 77, 255, 0.6);
+}
+
+/* RATE INSIDE BUY BOX */
+#fromEqualTo {
+  display: flex;
+  gap: 4px;
+  font-size: 0.7rem;
+  color: #6b6b99;
+  margin-top: 6px;
+}
+
+/* BILLING */
+.billing {
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+.billing div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.billing p:first-child {
+  font-size: 0.75rem;
+  color: #6b6b99;
+}
+
+.billing p:last-child {
+  font-size: 0.75rem;
+  color: white;
+  font-size: small;
+  font-weight: bold;
+}
+
+/* SPECIAL COLORS */
+#tolerance {
+  color: #00dbe9;
+  font-weight: bold;
+  font-size: small;
+}
+
+#networkFee {
+  color: #ff9f43;
+  font-size: small;
+  font-weight: bold;
+}
+
+/* BUTTON */
+#confirmSwap {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #a64dff, #4d94ff);
+  border: none;
+  border-radius: 30px;
+  color: #080808;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#confirmSwap:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(166, 77, 255, 0.6);
+}
+
+#confirmSwap i {
+  margin-right: 6px;
+}

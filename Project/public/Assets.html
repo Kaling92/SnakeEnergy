@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets</title>
+    <link rel="stylesheet" href="CSS/Homepage.css" />
+    <link rel="stylesheet" href="CSS/Receive.css" />
+    <link rel="stylesheet" href="CSS/Send.css" />
+    <link rel="stylesheet" href="CSS/Asset.css" />
+    <link rel="stylesheet" href="CSS/lang.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+</head>
+<body>
+    <div class="left">
+      <div class="title">Snake Energy</div>
+      <div class="profile">
+        <div><img id="userPhoto" src="CSS/user.png"></div>
+        <div id="userProfile">
+          <label data-i18n="userProfile">User Profile</label>
+           <p id="phoneNumber">0913108937</p>
+        </div>
+      </div>
+      <div class="menu">
+        <div id="menuDashboard" class="menuItem">
+          <i class="fa-solid fa-th"></i> <span class="menuLabel" data-i18n="menuDashboard">Dashboard</span></div>
+        <div id="menuAssets" class="menuItem">
+          <i class="fa-solid fa-wallet"></i> <span class="menuLabel" data-i18n="menuAssets">Assets</span></div>
+        <div id="menuSwap" class="menuItem">
+          <i class="fa-solid fa-arrow-right-arrow-left"></i> <span class="menuLabel" data-i18n="menuSwap">Swap</span></div>
+        <div id="menuAnalytics" class="menuItem">
+          <i class="fa-solid fa-chart-line"></i> <span class="menuLabel" data-i18n="menuAnalytics">Analytics</span></div>
+        <div id="menuNFT" class="menuItem">
+          <i class="fa-solid fa-gem"></i> <span class="menuLabel" data-i18n="menuNFT">NFTs</span></div>
+        <div id="menuTransactions" class="menuItem">
+          <i class="fa-solid fa-clock-rotate-left"></i> <span class="menuLabel" data-i18n="menuTransactions">Transactions</span></div>
+        <div id="menuNotifications" class="menuItem">
+          <i class="fa-solid fa-bell"></i> <span class="menuLabel" data-i18n="menuNotifications">Notifications</span></div>
+        <div id="menuSecurity" class="menuItem">
+          <i class="fa-solid fa-shield"></i> <span class="menuLabel" data-i18n="menuSecurity">Security</span></div>
+        <div id="menuSettings" class="menuItem">
+          <i class="fa-solid fa-gear"></i> <span class="menuLabel" data-i18n="menuSettings">Settings</span></div>
+      </div>
+      <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> <span data-i18n="logout">Log out</span></button>
+    </div>
+    <div class="right">
+      <div class="rightHeader">
+        <div class="rightHeaderLeft">
+          <input
+            id="searchBar"
+            type="text"
+            placeholder="Search Assets, NFTs..."
+          />
+          <div class="langSwitcher">
+            <button id="languageToggle">VI</button>
+          </div>
+        </div>
+        <div class="rightHeaderRight">
+          <div class="headerRightButton">
+            <button id="receive">Receive</button>
+            <button id="send">Send</button>
+          </div>
+          <div class="bell">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="wallet">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="rightPanel">
+        <div class="portfolioOverview">
+            <p data-i18n="portfolioTitle">PORTFOLIO OVERVIEW</p>
+            <p id="portfolioOverview">$142,850.42</p>
+            <div class="trend">
+                <div class="increase">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <p id="increaseAmount">+12,4</p>
+                    <p data-i18n="trend24h">(24H)</p>
+                </div>
+                <div class="reward">
+                    <i class="fa-solid fa-leaf"></i>
+                    <p id="rewardAmount">842</p>
+                    <p id="typeCurrency">SNK</p>
+                    <p data-i18n="rewardLabel">Rewards</p>
+                </div>
+            </div>
+        </div>
+        <div class="filterSort">
+            <div class="filter">
+                <i class="fa-solid fa-filter-circle-dollar"></i>
+                <span data-i18n="filter">Filter</span>
+            </div>
+            <div class="sort">
+                <i class="fa-solid fa-sort"></i>
+                <span data-i18n="sort">Sort</span>
+            </div>
+        </div>
+        <div class="assetTable">
+            <div class="assetColumn">
+                <p data-i18n="asset">ASSET</p>
+                <p data-i18n="price">PRICE</p>
+                <p data-i18n="balance">BALANCE</p>
+                <p data-i18n="value">VALUE</p>
+                <p data-i18n="change24h">24H CHANGE</p>
+            </div>
+            <div class="assetContainer">
+                <div class="assetBox" data-id="ethereum" data-balance="12.5" data-type="LIQUID">
+                    <div class="assetname">
+                        <i class="fa-brands fa-ethereum"></i>
+                        <div class="name">
+                            <p class="assetName">Ethereum</p>
+                            <p class="short">ETH</p>
+                        </div>
+                    </div>
+                    <div class="values">
+                        <div class="price">
+                            <p class="assetPrice">$0</p>
+                        </div>
+                        <div class="balanceAmount">
+                            <p class="assetBalance">12.50</p>
+                            <p class="currency">ETH</p>
+                            <p class="type">LIQUID</p>
+                        </div>
+                        <div class="value">
+                            <p class="assetValue">$0</p>
+                        </div>
+                        <div class="change24h">
+                            <p class="asset24hChange">0%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="assetBox" data-id="bitcoin" data-balance="1.2" data-type="LIQUID">
+                    <div class="assetname">
+                        <i class="fa-solid fa-bitcoin-sign"></i>
+                        <div class="name">
+                            <p class="assetName">Bitcoin</p>
+                            <p class="short">BTC</p>
+                        </div>
+                    </div>
+                    <div class="values">
+                        <div class="price">
+                            <p class="assetPrice">$0</p>
+                        </div>
+                        <div class="balanceAmount">
+                            <p class="assetBalance">1.20</p>
+                            <p class="currency">BTC</p>
+                            <p class="type">LIQUID</p>
+                        </div>
+                        <div class="value">
+                            <p class="assetValue">$0</p>
+                        </div>
+                        <div class="change24h">
+                            <p class="asset24hChange">0%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="assetBox" data-id="solana" data-balance="48.0" data-type="LIQUID">
+                    <div class="assetname">
+                        <i class="fa-brands fa-hive"></i>
+                        <div class="name">
+                            <p class="assetName">Solana</p>
+                            <p class="short">SOL</p>
+                        </div>
+                    </div>
+                    <div class="values">
+                        <div class="price">
+                            <p class="assetPrice">$0</p>
+                        </div>
+                        <div class="balanceAmount">
+                            <p class="assetBalance">48.00</p>
+                            <p class="currency">SOL</p>
+                            <p class="type">LIQUID</p>
+                        </div>
+                        <div class="value">
+                            <p class="assetValue">$0</p>
+                        </div>
+                        <div class="change24h">
+                            <p class="asset24hChange">0%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="assetBox" data-id="cardano" data-balance="123.4" data-type="LIQUID">
+                    <div class="assetname">
+                        <i class="fa-solid fa-coins"></i>
+                        <div class="name">
+                            <p class="assetName">Cardano</p>
+                            <p class="short">ADA</p>
+                        </div>
+                    </div>
+                    <div class="values">
+                        <div class="price">
+                            <p class="assetPrice">$0</p>
+                        </div>
+                        <div class="balanceAmount">
+                            <p class="assetBalance">123.40</p>
+                            <p class="currency">ADA</p>
+                            <p class="type">LIQUID</p>
+                        </div>
+                        <div class="value">
+                            <p class="assetValue">$0</p>
+                        </div>
+                        <div class="change24h">
+                            <p class="asset24hChange">0%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="assetBox" data-id="binancecoin" data-balance="7.5" data-type="LIQUID">
+                    <div class="assetname">
+                        <i class="fa-solid fa-cube"></i>
+                        <div class="name">
+                            <p class="assetName">BNB</p>
+                            <p class="short">BNB</p>
+                        </div>
+                    </div>
+                    <div class="values">
+                        <div class="price">
+                            <p class="assetPrice">$0</p>
+                        </div>
+                        <div class="balanceAmount">
+                            <p class="assetBalance">7.50</p>
+                            <p class="currency">BNB</p>
+                            <p class="type">LIQUID</p>
+                        </div>
+                        <div class="value">
+                            <p class="assetValue">$0</p>
+                        </div>
+                        <div class="change24h">
+                            <p class="asset24hChange">0%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="assetBox" data-id="dogecoin" data-balance="250.0" data-type="LIQUID">
+                    <div class="assetname">
+                        <i class="fa-brands fa-dog"></i>
+                        <div class="name">
+                            <p class="assetName">Dogecoin</p>
+                            <p class="short">DOGE</p>
+                        </div>
+                    </div>
+                    <div class="values">
+                        <div class="price">
+                            <p class="assetPrice">$0</p>
+                        </div>
+                        <div class="balanceAmount">
+                            <p class="assetBalance">250.00</p>
+                            <p class="currency">DOGE</p>
+                            <p class="type">LIQUID</p>
+                        </div>
+                        <div class="value">
+                            <p class="assetValue">$0</p>
+                        </div>
+                        <div class="change24h">
+                            <p class="asset24hChange">0%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="distributionAndOptimize">
+            <div class="assetDistribution">
+                <div class="assetDistributionTitle">
+                    <h2 data-i18n="distributionTitle">Asset Distribution</h2>
+                    <p data-i18n="distributionSubtitle">Portfolio spread across major protocols</p>
+                </div>
+                <div class="assetDistributionDashboard">
+                    <div class="pieChart"></div>
+                     <div class="dots">
+    <div class="dotRow">
+        <span class="dot top1"></span>
+        <div>
+            <p class="largest">Top 1</p>
+            <p class="percent">0%</p>
+        </div>
+    </div>
+
+    <div class="dotRow">
+        <span class="dot top2"></span>
+        <div>
+            <p class="largest">Top 2</p>
+            <p class="percent">0%</p>
+        </div>
+    </div>
+
+    <div class="dotRow">
+        <span class="dot top3"></span>
+        <div>
+            <p class="largest">Top 3</p>
+            <p class="percent">0%</p>
+        </div>
+    </div>
+
+    <div class="dotRow">
+        <span class="dot other"></span>
+        <div>
+            <p class="largest">Others</p>
+            <p class="percent">0%</p>
+        </div>
+    </div>
+</div>
+                </div>
+                
+            </div>
+            <div class="optimize">
+                <i class="fa-solid fa-wand-sparkles"></i>
+                <h2 data-i18n="optimizeTitle">Optimize your spending flow</h2>
+                <div class="exploreVault" id="exploreVaultBtn" style="cursor: pointer;">
+                    <p data-i18n="exploreVault">Explore Vaults</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+        </div>
+      </div>
+      <script src="navigation.js"></script>
+      <script src="lang.js"></script>
+      <script>
+        function formatUSD(value) {
+          return new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            maximumFractionDigits: 2
+          }).format(value);
+        }
+
+        function formatPercent(value) {
+          if (value === null || Number.isNaN(value)) {
+            return '0%';
+          }
+          return `${value >= 0 ? '+' : ''}${value.toFixed(2)}%`;
+        }
+
+        function installSearch() {
+          const searchBar = document.getElementById('searchBar');
+          const boxes = document.querySelectorAll('.assetBox');
+          if (!searchBar) return;
+
+          searchBar.addEventListener('input', (event) => {
+            const query = event.target.value.toLowerCase();
+            boxes.forEach((box) => {
+              const name = box.querySelector('.assetName')?.textContent.toLowerCase() || '';
+              const symbol = box.querySelector('.short')?.textContent.toLowerCase() || '';
+              box.style.display = name.includes(query) || symbol.includes(query) ? 'flex' : 'none';
+            });
+          });
+        }
+
+        async function loadMarketPrices() {
+          const assetBoxes = Array.from(document.querySelectorAll('.assetBox'));
+          const ids = assetBoxes.map((box) => box.dataset.id).filter(Boolean);
+          if (!ids.length) return;
+
+          const endpoint = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids.join(',')}` +
+            '&order=market_cap_desc&per_page=50&page=1&sparkline=false&price_change_percentage=24h';
+
+          try {
+            const response = await fetch(endpoint);
+            const marketData = await response.json();
+
+            let totalValue = 0;
+            let totalChangeValue = 0;
+            const assets = [];
+
+            assetBoxes.forEach((box) => {
+              const id = box.dataset.id;
+              const balance = Number(box.dataset.balance) || 0;
+              const coin = marketData.find((item) => item.id === id);
+              const price = coin?.current_price || 0;
+              const change = coin?.price_change_percentage_24h || 0;
+              const value = price * balance;
+
+              totalValue += value;
+              totalChangeValue += value * change;
+
+              box.querySelector('.assetPrice').textContent = formatUSD(price);
+              box.querySelector('.assetValue').textContent = formatUSD(value);
+              box.querySelector('.asset24hChange').textContent = formatPercent(change);
+              box.querySelector('.asset24hChange').style.color = change >= 0 ? '#05c46b' : '#ee5253';
+
+              assets.push({ box, id, name: box.querySelector('.assetName')?.textContent || id, value });
+            });
+
+            const avgChange = totalValue ? totalChangeValue / totalValue : 0;
+            document.getElementById('portfolioOverview').textContent = formatUSD(totalValue);
+            document.getElementById('increaseAmount').textContent = formatPercent(avgChange);
+            document.getElementById('increaseAmount').style.color = avgChange >= 0 ? '#05c46b' : '#ee5253';
+
+            assets.sort((a, b) => b.value - a.value);
+            const container = document.querySelector('.assetContainer');
+            assets.forEach((asset) => container.appendChild(asset.box));
+
+            const top3 = assets.slice(0, 3);
+            const otherValue = assets.slice(3).reduce((sum, asset) => sum + asset.value, 0);
+            const topPercents = top3.map((asset) => (totalValue ? (asset.value / totalValue) * 100 : 0));
+            const otherPercent = totalValue ? (otherValue / totalValue) * 100 : 0;
+
+            const pieChart = document.querySelector('.pieChart');
+            if (pieChart) {
+              const first = topPercents[0] || 0;
+              const second = topPercents[1] || 0;
+              const third = topPercents[2] || 0;
+              const start3 = first + second;
+              const start4 = first + second + third;
+              pieChart.style.background = `conic-gradient(#a855f7 0% ${first}%, #00e0ff ${first}% ${start3}%, #ff4d6d ${start3}% ${start4}%, #2f319a ${start4}% 100%)`;
+            }
+
+            const rows = document.querySelectorAll('.dotRow');
+            rows.forEach((row, index) => {
+              const title = row.querySelector('p:first-child');
+              const percent = row.querySelector('.percent');
+              if (!title || !percent) return;
+              if (index < 3) {
+                title.textContent = top3[index]?.name || `Top ${index + 1}`;
+                percent.textContent = `${topPercents[index]?.toFixed(0) || 0}%`;
+              } else {
+                title.textContent = 'Others';
+                percent.textContent = `${otherPercent.toFixed(0)}%`;
+              }
+            });
+          } catch (error) {
+            console.error('Failed to load market data', error);
+            document.getElementById('portfolioOverview').textContent = 'API error';
+          }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+          installSearch();
+          loadMarketPrices();
+        });
+      </script>
+</body>
+</html>

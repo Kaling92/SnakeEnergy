@@ -1,0 +1,619 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0d0d1a, #1a0033, #001f4d);
+  color: #e0e0ff;
+  display: flex;
+  min-height: 100vh;
+  gap: 10px;
+  font-size: 14px;
+}
+
+i:hover {
+  transform: scale(1.5);
+}
+/* Sidebar */
+.left {
+  padding: 15px;
+  width: 15%;
+  text-align: left;
+  background: rgba(20, 20, 40, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(166, 77, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #4b4bda, #8740c9, #265aa8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profile {
+  display: flex;
+  align-items: center; 
+  background-color: #2d1346; 
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #fff; 
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; 
+  margin-right: 12px; 
+  border: solid 2px rgb(133, 131, 131);
+}
+
+#userProfile label {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+}
+
+#userProfile p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #aaa; 
+}
+
+.menuItem {
+  text-align: left;
+  color: #b3b3cc;
+  padding: 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+.menuItem i {
+  margin-right: 15px;
+}
+.menuItem:hover, .menuItem.active {
+  background: rgba(166, 77, 255, 0.2);
+  color: #a64dff;
+  border-right: 3px solid #a64dff;
+  box-shadow: 0 0 6px rgba(166, 77, 255, 0.4);
+}
+
+#logoutBtn {
+  width: 85%;
+  margin: auto auto 20px auto;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #de8aff, #a64dff);
+  color: #0b0a1f;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  display: block;
+}
+
+#logoutBtn:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Right panel */
+.right {
+  flex: 1;
+  width: 78%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(46, 2, 88, 0.9);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 12px rgba(166, 77, 255, 0.3);
+}
+
+/* Header */
+.rightHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#searchBar {
+  border-radius: 15px;
+  width: 400px;
+  height: 32px;
+  padding: 6px 12px;
+  border: none;
+  background: #1a1a33;
+  color: #e0e0ff;
+  font-size: 0.85rem;
+}
+#searchBar::placeholder {
+  color: #777799;
+}
+
+.rightHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rightHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.rightHeaderRight i {
+  font-size: 1rem;
+  color: #e8e8ec;
+}
+
+#receive,
+#send {
+  padding: 6px;
+  width: 80px;
+  border-radius: 15px;
+  border: none;
+  font-size: 0.85rem;
+  background: linear-gradient(90deg, #a64dff, #4d94ff);
+  color: #080808;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-right: 20px;
+}
+#receive:hover,
+#send:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #bf8bef, #5aa9ff);
+}
+
+/* Balance box */
+.totalBalanceBox {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(20, 20, 40, 0.9);
+  box-shadow: 0 0 12px rgba(166, 77, 255, 0.3);
+}
+.totalBalanceBox p {
+  font-size: 0.8rem;
+  color: #b3b3cc;
+  margin-bottom: 6px;
+}
+
+#totalBalance {
+  font-size: 60px;
+  font-weight: bold;
+  background: linear-gradient(to right, #914ce0, #8105f4, #2f319a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 8px 0;
+}
+
+.calculate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.calculateEarn {
+  display: flex;
+  gap: 80px;
+}
+
+#profit,
+#growth {
+  font-size: 1rem;
+  font-weight: bold;
+}
+#profit {
+  color: #eb2c8b;
+}
+#growth {
+  color: #4da6ff;
+}
+
+.totalBalanceButton {
+  display: flex;
+  gap: 10px;
+}
+.totalBalanceButton button {
+  padding: 12px 26px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  background: #2d1346;
+  color: #e0e0ff;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.3s ease;
+}
+.totalBalanceButton button:hover {
+  background: #a64dff;
+  color: #080808;
+  transform: scale(1.05);
+}
+
+/* Market sections */
+.righMarket {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.rightPrice,
+.rightPriceActivity,
+.rightMarketList {
+  background: rgba(20, 20, 40, 0.85);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(166, 77, 255, 0.3);
+}
+
+.rightMarketList {
+  grid-column: span 2;
+}
+
+.rightPriceTopHolding {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rightPriceActivityTitle {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.activity,
+.assets,
+.marketTable {
+  height: 400px;
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.marketTable {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.marketHeader {
+  display: grid;
+  grid-template-columns: 4.4fr 1.2fr 1.2fr 0.7fr;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #a6a6d2;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.marketHeader span,
+.marketRow span,
+.marketRow .marketName {
+  color: #a6a6d2;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.marketHeader span {
+  color: #e5e5ff;
+}
+
+.marketRow {
+  display: grid;
+  grid-template-columns: 2.4fr 1fr 0.8fr 1.2fr;
+  align-items: center;
+  gap: 12px;
+  background: #1a1a33;
+  border-radius: 15px;
+  padding: 14px 16px;
+  box-shadow: 0 0 8px rgba(166, 77, 255, 0.18);
+}
+
+.marketRow .marketName {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.marketRow .marketName strong {
+  display: block;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.marketRow .marketName span {
+  display: block;
+  font-size: 0.75rem;
+  color: #8c8ceb;
+}
+
+.marketRow span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 600;
+  color: #f0f0ff;
+}
+
+.marketChange.positive {
+  color: #4ce13f;
+}
+
+.marketChange.negative {
+  color: #f25454;
+}
+
+.marketPlaceholder {
+  justify-content: flex-start;
+  color: #c4c4d1;
+}
+
+.marketName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.marketName img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.marketName strong {
+  display: block;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.marketName span {
+  display: block;
+  font-size: 0.75rem;
+  color: #8c8ceb;
+}
+
+.marketChange.positive {
+  color: #4ce13f;
+}
+
+.marketChange.negative {
+  color: #f25454;
+}
+
+#allAssests {
+  color: #00dbe9;
+}
+#allAssests:hover {
+  text-decoration: underline;
+}
+
+.assetsBox,
+.activityBox {
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+  background: #23344d;
+  transition: transform 0.2s ease;
+  font-size: 0.85rem;
+}
+.assetsBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a33;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  box-shadow: 0 0 8px rgba(166, 77, 255, 0.3);
+  transition: transform 0.2s ease;
+}
+.assetsBox:hover {
+  transform: scale(1.02);
+}
+.assetsName h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+.assetsName p {
+  font-size: 0.75rem;
+  color: #b3b3cc;
+  margin: 2px 0 0;
+}
+.currentPrice h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e0e0ff;
+  margin: 0;
+}
+.currentPrice p {
+  font-size: 0.75rem;
+  color: #a6a6d2;
+  margin: 2px 0 0;
+}
+
+.trending {
+  text-align: right;
+}
+.trending h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+.trending p {
+  font-size: 0.7rem;
+  color: #a6a6d2;
+  margin: 2px 0 0;
+}
+
+.trending h1 {
+  color: #4da6ff;
+}
+.trending h1.negative {
+  color: #eb2c8b;
+}
+
+.activityBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a33;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 8px 0;
+  box-shadow: 0 0 8px rgba(166, 77, 255, 0.3);
+  transition: transform 0.2s ease;
+}
+.activityBox:hover {
+  transform: scale(1.02);
+}
+.acitivityName h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+.acitivityName p {
+  font-size: 0.75rem;
+  color: #a6a6d2;
+  margin: 2px 0;
+}
+.acitivityName .completed {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #00dbe9;
+}
+.acitivityName .pending {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+#acitivtyAction {
+  font-size: 0.8rem;
+  color: #a6a6d2;
+}
+
+.activityAmount p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #e0e0ff;
+  margin: 0;
+  text-align: right;
+}
+
+#viewHistory {
+  padding: 10px;
+  width: 100%;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  background: #1a1a33;
+  color: whitesmoke;
+  text-align: center;
+  border: solid 1px whitesmoke;
+  transition: transform 0.2s ease;
+}
+#viewHistory:hover {
+  background: #bf8bef;
+  color: black;
+  transform: scale(1.02);
+}
+
+.rightInfoCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+  grid-column: span 2;
+}
+
+.infoCard {
+  background: rgba(20, 20, 40, 0.85);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(166, 77, 255, 0.3);
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+.infoCard:hover {
+  transform: scale(1.02);
+}
+
+.infoCard i {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+#priceActionCard i {
+  color: #4da6ff;
+}
+#liquidityCard i {
+  color: #eb2c8b;
+}
+#verifiedPoolCard i {
+  color: #ff4d4d;
+}
+
+.infoCard h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.infoCard p {
+  font-size: 0.85rem;
+  color: #b3b3cc;
+  margin-bottom: 8px;
+}
+
+.auditBtn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background: #2d1346;
+  color: #e0e0ff;
+  border: none;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+.auditBtn:hover {
+  background: #a64dff;
+  color: #080808;
+  transform: scale(1.05);
+}
+
+.footer {
+  padding: 50px;
+}

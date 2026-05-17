@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="CSS/Login.css">
+    <link rel="stylesheet" href="CSS/lang.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="langSwitcher" style="position: absolute; top: 20px; right: 20px;">
+      <button id="languageToggle">VI</button>
+    </div>
+    <div class="formHead">
+      <h1>Snake Energy</h1>
+      <h2>DECENTRALIZED POWERHOUSE</h2>
+    </div>
+    <div class="container">
+      <div class="title" data-i18n="loginTitle">Secure Sign In</div>
+      <p data-i18n="accessVault">Access your kinetic assets vault</p>
+      <div class="loginField" data-i18n="identityAccess">IDENTITY ACCESS</div>
+      <div class="input">
+        <input id="userName" type="text" placeholder="Email or Username" data-i18n="emailOrUsername" />
+      </div>
+      <div class="passWordField">
+        <div class="loginField" data-i18n="accessKey">ACCESS KEY</div>
+        <a id="recover" class="loginField" data-i18n="recover">RECOVER</a>
+      </div>
+      <div class="input">
+        <input id="passWord" type="password" />
+      </div>
+      <button id="connect" data-i18n="connectWallet">
+        CONNECT WALLET
+        <i class="fa-solid fa-bolt"></i>
+      </button>
+      <div class="socialLogin">
+        <button id="GG" data-i18n="google">GOOGLE</button>
+        <button id="iOS" data-i18n="ios">iOS</button>
+      </div>
+      <div class="signUp">
+        <p data-i18n="newToEnergy">New to the energy?</p>
+        <a id="signUp" data-i18n="initializeAccount">Initialize account</a>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("connect").addEventListener("click", async function () {
+        const username = document.getElementById("userName").value;
+        const password = document.getElementById("passWord").value;
+
+        try {
+          const res = await fetch("http://localhost:3000/api/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+          });
+
+          const data = await res.json();
+          if (data.success) {
+            // alert("Login successful! Token: " + data.token);
+            window.location.href = "/Homepage.html";
+          } else {
+            alert("Login failed: " + data.message);
+          }
+        } catch (err) {
+          console.error(err);
+          alert("Error connecting to API.");
+        }
+      });
+
+      document.getElementById("signUp").addEventListener("click", function () {
+        window.location.href = "/SignUp.html";
+      });
+    </script>
+    <script src="lang.js"></script>
+  </body>
+</html>

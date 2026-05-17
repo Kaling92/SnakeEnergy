@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receive</title>
+    <link rel="stylesheet" href="CSS/Homepage.css" />
+    <link rel="stylesheet" href="CSS/Receive.css" />
+    <link rel="stylesheet" href="CSS/lang.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="left">
+      <div class="title">Snake Energy</div>
+      <div class="profile">
+        <div><img id="userPhoto" src="CSS/user.png" /></div>
+        <div id="userProfile">
+          <label data-i18n="userProfile">User Profile</label>
+          <p id="phoneNumber">0913108937</p>
+        </div>
+      </div>
+      <div class="menu">
+        <div id="menuDashboard" class="menuItem" data-i18n="menuDashboard">
+          <i class="fa-solid fa-th"></i> Dashboard
+        </div>
+        <div id="menuAssets" class="menuItem" data-i18n="menuAssets">
+          <i class="fa-solid fa-wallet"></i> Assets
+        </div>
+        <div id="menuSwap" class="menuItem" data-i18n="menuSwap">
+          <i class="fa-solid fa-arrow-right-arrow-left"></i> Swap
+        </div>
+        <div id="menuAnalytics" class="menuItem" data-i18n="menuAnalytics">
+          <i class="fa-solid fa-chart-line"></i> Analytics
+        </div>
+        <div id="menuNFT" class="menuItem" data-i18n="menuNFT">
+          <i class="fa-solid fa-gem"></i> NFTs
+        </div>
+        <div id="menuTransactions" class="menuItem" data-i18n="menuTransactions">
+          <i class="fa-solid fa-clock-rotate-left"></i> Transactions
+        </div>
+        <div id="menuNotifications" class="menuItem" data-i18n="menuNotifications">
+          <i class="fa-solid fa-bell"></i> Notifications
+        </div>
+        <div id="menuSecurity" class="menuItem" data-i18n="menuSecurity">
+          <i class="fa-solid fa-shield"></i> Security
+        </div>
+        <div id="menuSettings" class="menuItem" data-i18n="menuSettings">
+          <i class="fa-solid fa-gear"></i> Settings
+        </div>
+      </div>
+      <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> <span data-i18n="logout">Log out</span></button>
+    </div>
+    <div class="right">
+      <div class="rightHeader">
+        <div class="rightHeaderLeft">
+          <input
+            id="searchBar"
+            type="text"
+            placeholder="Search Assets, NFTs..."
+          />
+          <div class="langSwitcher">
+            <button id="languageToggle">VI</button>
+          </div>
+        </div>
+        <div class="rightHeaderRight">
+          <div class="headerRightButton">
+            <button id="receive">Receive</button>
+            <button id="send">Send</button>
+          </div>
+          <div class="bell">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="wallet">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+        </div>
+      </div>
+      <div class="transactionHubTitle">
+        <p data-i18n="transactionHub">TRANSACTION HUB</p>
+        <h1 data-i18n="receiveAssets">Receive Assets</h1>
+      </div>
+      <div class="transactionHub">
+        <div class="receive">
+          <div id="qrCode"></div>
+          <p data-i18n="yourSnakeAddress" style="margin-top: 15px;">YOUR SNAKE WALLET ADDRESS</p>
+          <p id="address">0x4cbe58c50480...a3f5d1b</p>
+          <div class="receiveButton">
+            <button id="copyAddress">
+              <i class="fa-solid fa-copy"></i>
+              <label data-i18n="copyAddress">Copy Address</label>
+            </button>
+            <button id="shareLink">
+              <i class="fa-solid fa-share"></i>
+              <label data-i18n="shareLink">Share Link</label>
+            </button>
+          </div>
+        </div>
+
+        <div class="rightNetwork">
+          <div class="rightNetworkTitle">
+            <i class="fa-solid fa-network-wired"></i>
+            <p data-i18n="selectNetwork">Select Network</p>
+          </div>
+          <div class="netWorkBox">
+            <img src="" />
+            <p id="networkName" class="netWorkName">Ethereum Mainnet</p>
+            <p id="reccommend" class="reccommend" data-i18n="recommended">RECOMMENDED</p>
+            <p id="connectedCheck" class="connectedCheck"></p>
+          </div>
+          <div class="netWorkBox">
+            <img src="" />
+            <p id="networkName" class="netWorkName">Tron</p>
+            <p id="reccommend" class="reccommend" data-i18n="lowFee">LOW FEE</p>
+            <p id="connectedCheck" class="connectedCheck"></p>
+          </div>
+          <div class="netWorkBox">
+            <img src="" />
+            <p id="networkName" class="netWorkName">META MASK</p>
+            <p id="reccommend" class="reccommend" data-i18n="layer2">LAYER 2</p>
+            <p id="connectedCheck" class="connectedCheck"></p>
+          </div>
+          <div class="safetyProtocol">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <p class="safetyProtocolTitle" data-i18n="safetyProtocol">SAFETY PROTOCOL</p>
+            <p class="safetyProtocolContent" data-i18n="safetyProtocolContent">
+              Only send ETH and ERC-20 to this address.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mainNet">
+        <div class="mainNetTitle">
+          <p data-i18n="supportedTokens">Supported Tokens on Mainnet</p>
+          <button id="autoVerify" data-i18n="autoVerifyEnabled">AUTO VEIRFY ENABLED</button>
+        </div>
+        <div class="mainNetSection">
+          <div class="tokenBox">
+            <div class="tokenBoxContent">
+              <i class="fa-brands fa-bitcoin"></i>
+              <p class="tokenName">WBTC</p>
+              <p class="tokenFullName">Wrapped Bitcoin</p>
+            </div>
+            <p class="tokenTrending">+1.2%</p>
+          </div>
+          <div class="tokenBox">
+            <div class="tokenBoxContent">
+              <i class="fa-solid fa-dollar-sign"></i>
+              <p class="tokenName">USDT</p>
+              <p class="tokenFullName">Tether USD</p>
+            </div>
+            <p class="tokenTrending">-0.01%</p>
+          </div>
+          <div class="tokenBox">
+            <div class="tokenBoxContent">
+              <i class="fa-solid fa-staff-snake"></i>
+              <p class="tokenName">SNK</p>
+              <p class="tokenFullName">Snake Energy</p>
+            </div>
+            <p class="tokenTrending">-0.01%</p>
+          </div>
+          <div class="addingToken">
+            <button id="addTokenButton">+</button>
+            <h2 data-i18n="addToken">Add Token</h2>
+            <p data-i18n="customImport">Custom Import</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="navigation.js"></script>
+    <script src="lang.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const walletAddress = "0x4cbe58c50480a3f5d1b"; // Replace with actual dynamic logic later
+        
+        const qrContainer = document.getElementById("qrCode");
+        qrContainer.innerHTML = ""; 
+        new QRCode(qrContainer, {
+          text: walletAddress,
+          width: 260,
+          height: 260,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H
+        });
+
+        document.getElementById("copyAddress").addEventListener("click", () => {
+          navigator.clipboard.writeText(walletAddress);
+          alert("Wallet address copied to clipboard!");
+        });
+      });
+    </script>
+  </body>
+</html>

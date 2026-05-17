@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction Ledger | Snake Energy</title>
+    <link rel="stylesheet" href="CSS/Homepage.css" />
+    <link rel="stylesheet" href="CSS/Analytics.css" />
+    <link rel="stylesheet" href="CSS/Transactions.css" />
+    <link rel="stylesheet" href="CSS/lang.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <div class="left">
+      <div class="title">Snake Energy</div>
+      <div class="profile">
+        <div><img id="userPhoto" src="CSS/user.png" /></div>
+        <div id="userProfile">
+          <p style="margin: 0; font-size: 13px; font-weight: 600; color: #fff;">0x71C...3a4b</p>
+          <div class="profileStatus">
+            <span class="profileDot"></span>
+            <span>Connected</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div id="menuDashboard" class="menuItem" data-i18n="menuDashboard"><i class="fa-solid fa-th"></i> Dashboard</div>
+        <div id="menuAssets" class="menuItem" data-i18n="menuAssets"><i class="fa-solid fa-wallet"></i> Assets</div>
+        <div id="menuSwap" class="menuItem" data-i18n="menuSwap"><i class="fa-solid fa-arrow-right-arrow-left"></i> Swap</div>
+        <div id="menuAnalytics" class="menuItem" data-i18n="menuAnalytics"><i class="fa-solid fa-chart-line"></i> Analytics</div>
+        <div id="menuNFT" class="menuItem" data-i18n="menuNFT"><i class="fa-solid fa-gem"></i> NFTs</div>
+        <div id="menuTransactions" class="menuItem active" data-i18n="menuTransactions"><i class="fa-solid fa-clock-rotate-left"></i> Transactions</div>
+        <div id="menuNotifications" class="menuItem" data-i18n="menuNotifications"><i class="fa-solid fa-bell"></i> Notifications</div>
+        <div id="menuSecurity" class="menuItem" data-i18n="menuSecurity"><i class="fa-solid fa-shield"></i> Security</div>
+        <div id="menuSettings" class="menuItem" data-i18n="menuSettings"><i class="fa-solid fa-gear"></i> Settings</div>
+      </div>
+      <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> <span data-i18n="logout">Log out</span></button>
+    </div>
+
+    <div class="right">
+      <div class="rightHeader">
+        <div class="rightHeaderLeft">
+          <input id="searchBar" type="text" placeholder="Search hash, addr" />
+        
+          <div class="langSwitcher" style="margin-left: 20px;">
+            <button id="languageToggle">VI</button>
+          </div>
+        </div>
+        <div class="rightHeaderRight">
+          <div class="headerRightButton">
+            <button id="receive">Receive</button>
+            <button id="send">Send</button>
+          </div>
+          <div class="bell"><i class="fa-solid fa-bell"></i></div>
+          <div class="wallet"><i class="fa-solid fa-wallet"></i></div>
+        </div>
+      </div>
+
+      <div class="portfolioPanel">
+        <div class="portfolioTitleName">
+          <p data-i18n="onChainActivity" style="color: #00e0ff; letter-spacing: 2px; font-weight: bold; margin: 0;">ON-CHAIN ACTIVITY</p>
+          <h1 data-i18n="txLedgerTitle">TRANSACTION LEDGER</h1>
+        </div>
+
+        <div class="summaryRow">
+            <div class="refineCard">
+                <div class="refineHeader">
+                    <h3 data-i18n="refineResults">Refine Results</h3>
+                    <a href="#" class="resetFilters"><i class="fa-solid fa-rotate-left"></i> <span data-i18n="resetFilters">Reset Filters</span></a>
+                </div>
+                <div class="filterControls">
+                    <div class="filterGroup">
+                        <label data-i18n="txType">Transaction Type</label>
+                        <select class="filterSelect"><option data-i18n="allActivities">All Activities</option></select>
+                    </div>
+                    <div class="filterGroup">
+                        <label data-i18n="timeHorizon">Time Horizon</label>
+                        <select class="filterSelect"><option data-i18n="last30Days">Last 30 Days</option></select>
+                    </div>
+                    <div class="filterGroup">
+                        <label data-i18n="assetProtocol">Asset Protocol</label>
+                        <select class="filterSelect"><option data-i18n="allAssets">All Assets</option></select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="volumeCard">
+                <p data-i18n="totalVolume30d">TOTAL VOLUME (30D)</p>
+                <h2 id="totalVolume">$124,592.80</h2>
+                <div class="volumeStats">
+                    <div class="stat"><span class="statDot" style="background: #00e0ff;"></span> 142 <span data-i18n="completedText">Completed</span></div>
+                    <div class="stat"><span class="statDot" style="background: #ffab00;"></span> 3 <span data-i18n="pendingText">Pending</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="transactionLedger" id="txLedger">
+            <div class="txRow">
+                <div class="txLeft">
+                    <div class="txIconBox" style="color: #00e0ff;">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <span class="statusDot" style="background: #ffab00;"></span>
+                    </div>
+                    <div class="txInfo">
+                        <h4 data-i18n="swapAssets">Swap Assets</h4>
+                        <p>ETH &rarr; SNK &bull; 2 mins ago</p>
+                    </div>
+                </div>
+                <div class="txRight">
+                    <div class="txValues">
+                        <p class="amount">1.25 ETH</p>
+                        <p class="subValue">-$2,450.12</p>
+                    </div>
+                    <div class="impact">
+                        <p class="tokenAmount">+14,200 SNK</p>
+                        <p class="usdValue">+$2,448.90</p>
+                    </div>
+                    <span class="badge pending" data-i18n="pendingText">PENDING</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square externalLink"></i>
+                </div>
+            </div>
+
+            <div class="txRow">
+                <div class="txLeft">
+                    <div class="txIconBox" style="color: #a64dff;">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        <span class="statusDot" style="background: #00e0ff;"></span>
+                    </div>
+                    <div class="txInfo">
+                        <h4 data-i18n="sentAssets">Sent Assets</h4>
+                        <p>To: 0x4f...92e1 &bull; Oct 24, 14:32</p>
+                    </div>
+                </div>
+                <div class="txRight">
+                    <div class="txValues" style="margin-right: 40px;">
+                        <p class="amount">500.00 USDC</p>
+                        <p class="subValue">-$500.00</p>
+                    </div>
+                    <span class="badge completed" data-i18n="completedText">COMPLETED</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square externalLink"></i>
+                </div>
+            </div>
+
+            <div class="txRow">
+                <div class="txLeft">
+                    <div class="txIconBox" style="color: #ff4d6d;">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span class="statusDot" style="background: #00e0ff;"></span>
+                    </div>
+                    <div class="txInfo">
+                        <h4 data-i18n="stakeAssets">Stake Assets</h4>
+                        <p>V3 Liquidity Pool &bull; Oct 23, 09:12</p>
+                    </div>
+                </div>
+                <div class="txRight">
+                    <div class="txValues" style="margin-right: 40px;">
+                        <p class="amount" style="color: #ff4d6d;">2,500.00 SNK</p>
+                        <p class="subValue">-$412.30 staked</p>
+                    </div>
+                    <span class="badge completed" data-i18n="completedText">COMPLETED</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square externalLink"></i>
+                </div>
+            </div>
+
+            <div class="txRow">
+                <div class="txLeft">
+                    <div class="txIconBox" style="color: #00e0ff;">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <span class="statusDot" style="background: #00e0ff;"></span>
+                    </div>
+                    <div class="txInfo">
+                        <h4 data-i18n="receivedAssets">Received Assets</h4>
+                        <p>From: 0x9a...2b0c &bull; Oct 22, 18:45</p>
+                    </div>
+                </div>
+                <div class="txRight">
+                    <div class="txValues" style="margin-right: 40px;">
+                        <p class="amount" style="color: #05c46b;">+0.05 ETH</p>
+                        <p class="subValue">+$98.12</p>
+                    </div>
+                    <span class="badge completed" data-i18n="completedText">COMPLETED</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square externalLink"></i>
+                </div>
+            </div>
+
+            <div class="txRow">
+                <div class="txLeft">
+                    <div class="txIconBox" style="color: #6b6b99;">
+                        <i class="fa-solid fa-cube"></i>
+                        <span class="statusDot" style="background: #ff4d6d;"></span>
+                    </div>
+                    <div class="txInfo">
+                        <h4 data-i18n="mintNft">Mint NFT</h4>
+                        <p style="color: #ff4d6d; font-style: italic;"><span data-i18n="executionReverted">Execution Reverted</span> &bull; Oct 21, 21:04</p>
+                    </div>
+                </div>
+                <div class="txRight">
+                    <div class="txValues" style="margin-right: 40px;">
+                        <p class="amount">1 Genesis Snake</p>
+                        <p class="subValue">Gas: 0.002 ETH</p>
+                    </div>
+                    <span class="badge failed">FAILED</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square externalLink"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <div class="pageBtn"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="pageBtn active">1</div>
+            <div class="pageBtn">2</div>
+            <div class="pageBtn">3</div>
+            <div class="pageBtn">...</div>
+            <div class="pageBtn">12</div>
+            <div class="pageBtn"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="lang.js"></script>
+    <script>
+      async function updatePrices() {
+        try {
+          const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum,solana&vs_currencies=usd');
+          const prices = await response.json();
+          const ethPrice = prices.ethereum.usd;
+          const solPrice = prices.solana.usd;
+
+          const volumeText = document.getElementById('totalVolume');
+          const baseVolume = 124500;
+          volumeText.textContent = '$' + (baseVolume + ethPrice).toLocaleString();
+
+          const gasText = document.querySelector('.txRow:last-child .subValue');
+          if(gasText) {
+            const gasFee = 0.002 * ethPrice;
+            gasText.textContent = 'Gas: $' + gasFee.toFixed(2);
+          }
+        } catch (error) {
+          console.log("No internet or API error.");
+        }
+      }
+
+      document.querySelectorAll('.pageBtn').forEach(btn => {
+        btn.onclick = function() {
+          if(!this.classList.contains('active')) {
+            document.querySelector('.pageBtn.active').classList.remove('active');
+            this.classList.add('active');
+            alert("Loading page " + this.innerText + "...");
+          }
+        };
+      });
+
+      document.querySelectorAll('.filterGroup button').forEach(btn => {
+        btn.onclick = function() {
+          const group = this.parentElement;
+          group.querySelector('.active').classList.remove('active');
+          this.classList.add('active');
+        };
+      });
+
+      setInterval(updatePrices, 10000);
+      updatePrices();
+    </script>
+</body>
+</html>

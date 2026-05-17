@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/SignUp.css" />
+    <link rel="stylesheet" href="CSS/lang.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="langSwitcher" style="position: absolute; top: 20px; right: 20px;">
+      <button id="languageToggle">VI</button>
+    </div>
+    <div class="left">
+      <div class="formHeader">Snake Energy</div>
+      <p data-i18n="protectWallet">Protect your wallet</p>
+      <div class="seedSecurity">
+        <h2 data-i18n="seedSecurityTitle">Seed Phrase Security</h2>
+        <p data-i18n="seedSecurityDesc">
+          Your recovery phrase is the master key to your assets. Never share it
+          with anyone else. Snake energy will never ask for your recovery phrase
+          in any support interaction.
+        </p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="container">
+        <div class="signUp">
+          <div class="signUpField" data-i18n="fullName">FULL NAME</div>
+          <input id="fullName" type="text" placeholder="Satoshi Nakamoto" />
+        </div>
+        <div class="signUp">
+          <div class="signUpField" data-i18n="etherEmail">ETHER EMAIL</div>
+          <input id="email" type="email" placeholder="snake@gmail.com" />
+        </div>
+        <div class="signUp">
+          <div class="signUpField" data-i18n="vaultKey">VAULT KEY</div>
+          <input id="vaulKey" type="password" />
+        </div>
+        <div class="signUp">
+          <div class="signUpField" data-i18n="confirmKey">CONFIRM KEY</div>
+          <input id="confirmKey" type="password" />
+        </div>
+        <div class="acknowledge">
+          <input id="acknowledge" type="checkbox" /><span data-i18n="ack1">I acknowledge that I have
+          read the </span><a id="policy" data-i18n="policyTerms">Policy Terms</a><span data-i18n="ack2"> and understand that my
+          private keys are my sole responsibility.</span>
+        </div>
+        <button id="createWallet" data-i18n="createWallet">
+          Create Wallet
+          <i class="fa-solid fa-bolt"></i>
+        </button>
+        <div class="login">
+          <p data-i18n="alreadySynchronized">Already synchornized?</p>
+          <a id="login" data-i18n="loginToVault">Login to Vault</a>
+        </div>
+      </div>
+      <p class="subDes" data-i18n="securingFuture">SECURING THE FUTURE OF DECENTRALIZED ENERGY</p>
+    </div>
+
+    <script>
+      document.getElementById("createWallet").addEventListener("click", async function () {
+        const fullName = document.getElementById("fullName").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("vaulKey").value;
+        const confirmPassword = document.getElementById("confirmKey").value;
+        const acknowledge = document.getElementById("acknowledge").checked;
+
+        if (!fullName || !email || !password || !confirmPassword) {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match.");
+          return;
+        }
+
+        if (!acknowledge) {
+          alert("Please acknowledge the policy terms.");
+          return;
+        }
+
+        try {
+          const res = await fetch("http://localhost:3000/api/signup", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username: email, password, fullName }),
+          });
+
+          const data = await res.json();
+          if (data.success) {
+            alert("Account created successfully!");
+            window.location.href = "/WalletSuccess.html";
+          } else {
+            alert("Signup failed: " + data.message);
+          }
+        } catch (err) {
+          console.error(err);
+          alert("Error connecting to API.");
+        }
+      });
+
+      document.getElementById("login").addEventListener("click", function () {
+        window.location.href = "/Login.html";
+      });
+    </script>
+    <script src="lang.js"></script>
+  </body>
+</html>

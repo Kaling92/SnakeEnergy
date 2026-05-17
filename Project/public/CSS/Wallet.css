@@ -1,0 +1,189 @@
+/* REFINED WALLET MANAGEMENT STYLES */
+
+body {
+    background: radial-gradient(circle at top left, #120a2a, #070714 60%) !important;
+}
+
+.right {
+    background: #111128 !important;
+}
+
+.walletContainer {
+    padding: 15px 30px;
+    max-width: 1400px;
+    width: 98%;
+    margin: auto;
+}
+
+/* Remove specific sidebar overrides to prevent glitches */
+
+/* PAGE HEADER */
+.pageTitle {
+    font-size: 42px;
+    font-weight: 900;
+    margin: 0;
+}
+
+.pageSubtitle {
+    color: #6b6b99;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    max-width: 500px;
+    line-height: 1.6;
+    margin: 10px 0 40px;
+    font-weight: 600;
+}
+
+/* VAULT CARDS */
+.vaultGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.vaultCard {
+    background: #121128;
+    border-radius: 20px;
+    padding: 20px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.vaultCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(166, 77, 255, 0.1);
+}
+
+.vTop p {
+    font-size: 9px;
+    color: #6b6b99;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0 0 12px 0;
+}
+
+.vTop h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 5px 0;
+}
+
+.vTop .addr {
+    font-size: 11px;
+    color: #00e0ff;
+    opacity: 0.8;
+}
+
+.vBottom span {
+    font-size: 9px;
+    color: #6b6b99;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.vBottom h2 {
+    font-size: 24px;
+    font-weight: 900;
+    margin: 0;
+    color: #fff;
+}
+
+.vBottom h2 small {
+    font-size: 14px;
+    opacity: 0.5;
+    font-weight: 400;
+}
+
+/* PRIMARY TAG */
+.primaryTag {
+    background: #a64dff;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 900;
+    padding: 2px 8px;
+    border-radius: 4px;
+    float: right;
+}
+
+.hardwareTag {
+    background: #ff4d6d;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 900;
+    padding: 2px 8px;
+    border-radius: 4px;
+    float: right;
+}
+
+/* ADD VAULT */
+.addVaultCard {
+    background: transparent;
+    border: 2px dashed #00e0ff55;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #00e0ff;
+}
+
+.addVaultCard:hover {
+    border-color: #00e0ff;
+    background: rgba(0, 224, 255, 0.03);
+}
+
+.addVaultCard i { font-size: 28px; margin-bottom: 20px; }
+.addVaultCard h4 { margin: 0; font-size: 13px; font-weight: 900; }
+.addVaultCard p { font-size: 9px; opacity: 0.6; margin-top: 8px; }
+
+/* NEBULA ACTIVITY */
+.activityHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+
+.activityHeader h2 {
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.viewHistory {
+    font-size: 9px;
+    color: #6b6b99;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.activityTable {
+    background: #11112a;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; padding: 12px 15px; font-size: 8px; color: #6b6b99; font-weight: 800; opacity: 0.6; border-bottom: 1px solid rgba(255,255,255,0.05); }
+td { padding: 15px; font-size: 11px; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.02); }
+
+.vLabel { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.vDot { width: 6px; height: 6px; border-radius: 50%; }
+
+.interaction { color: #fff; font-weight: 500; }
+.entity { color: #00e0ff; opacity: 0.7; font-family: monospace; }
+.delta { font-weight: 900; }
+.delta.plus { color: #de8aff; }
+.delta.minus { color: #ff6b98; }
+
+.entBar { width: 100px; height: 3px; background: rgba(255,255,255,0.05); border-radius: 2px; }
+.entFill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, #00e0ff, #de8aff); }

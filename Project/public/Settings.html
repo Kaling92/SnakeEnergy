@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="menuSettings">Settings</title>
+    <link rel="stylesheet" href="CSS/Homepage.css" />
+    <link rel="stylesheet" href="CSS/AdvancedSettings.css" />
+    <link rel="stylesheet" href="CSS/lang.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="left">
+      <div class="title">Snake Energy</div>
+      <div class="profile">
+        <div><img id="userPhoto" src="CSS/user.png" /></div>
+        <div id="userProfile">
+          <label data-i18n="userProfile">User Profile</label>
+          <p id="phoneNumber">0913108937</p>
+        </div>
+      </div>
+      <div class="menu">
+        <div id="menuDashboard" class="menuItem" data-i18n="menuDashboard"><i class="fa-solid fa-th"></i> Dashboard</div>
+        <div id="menuAssets" class="menuItem" data-i18n="menuAssets"><i class="fa-solid fa-wallet"></i> Assets</div>
+        <div id="menuSwap" class="menuItem" data-i18n="menuSwap"><i class="fa-solid fa-arrow-right-arrow-left"></i> Swap</div>
+        <div id="menuAnalytics" class="menuItem" data-i18n="menuAnalytics"><i class="fa-solid fa-chart-line"></i> Analytics</div>
+        <div id="menuNFT" class="menuItem" data-i18n="menuNFT"><i class="fa-solid fa-gem"></i> NFTs</div>
+        <div id="menuTransactions" class="menuItem" data-i18n="menuTransactions"><i class="fa-solid fa-clock-rotate-left"></i> Transactions</div>
+        <div id="menuNotifications" class="menuItem" data-i18n="menuNotifications"><i class="fa-solid fa-bell"></i> Notifications</div>
+        <div id="menuSecurity" class="menuItem" data-i18n="menuSecurity"><i class="fa-solid fa-shield"></i> Security</div>
+        <div id="menuSettings" class="menuItem active" data-i18n="menuSettings"><i class="fa-solid fa-gear"></i> Settings</div>
+      </div>
+      <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> <span data-i18n="logout">Log out</span></button>
+    </div>
+
+    <div class="right">
+      <div class="rightHeader">
+        <div class="rightHeaderLeft">
+          <input id="searchBar" type="text" placeholder="Search Assets, NFTs..." />
+          <div class="langSwitcher">
+            <button id="languageToggle">VI</button>
+          </div>
+        </div>
+        <div class="rightHeaderRight">
+          <div class="headerRightButton">
+            <button id="receive">Receive</button>
+            <button id="send">Send</button>
+          </div>
+          <div class="bell">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="wallet">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="settingsPanel">
+        <div class="headerStats">
+            <div class="statBox"><span data-i18n="networkLatency">NETWORK LATENCY</span><p style="color: #00e0ff;"><i class="fa-solid fa-circle" style="font-size: 6px; vertical-align: middle;"></i> 24ms</p></div>
+            <div class="statBox"><span data-i18n="blockHeight">BLOCK HEIGHT</span><p>18,442,109</p></div>
+        </div>
+
+        <p class="pageLabel" data-i18n="snakeEngine">SNAKE ENGINE V2.0.4</p>
+        <h1 class="pageTitle" data-i18n="menuSettings">Settings</h1>
+
+        <div class="settingsGrid">
+            <div class="col">
+                <div class="card">
+                    <div class="cardHeader"><i class="fa-solid fa-earth-americas"></i> <h3 data-i18n="generalSettings">General</h3></div>
+                    <div class="field"><label data-i18n="displayLanguage">Display Language</label><select class="select"><option data-i18n="englishUniv">English (Universal)</option></select></div>
+                    <div class="field"><label data-i18n="primaryCurrency">Primary Currency</label><select class="select"><option data-i18n="usdCurrency">USD ($)</option></select></div>
+                    <div class="field">
+                        <label data-i18n="rpcStrategy">RPC Node Strategy</label>
+                        <div class="rpcOption">
+                            <div><p data-i18n="autoSwitch" style="font-size: 14px; font-weight: 600; margin: 0;">Auto-Switch (Ultra)</p><p style="font-size: 10px; color: #00e0ff;"><i class="fa-solid fa-circle" style="font-size: 5px;"></i> <span data-i18n="optimalRouting">Optimal latency routing</span></p></div>
+                            <i class="fa-solid fa-circle-check" style="color: #00e0ff;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <div class="cardHeader" style="justify-content: space-between;">
+                        <div style="display: flex; align-items: center; gap: 12px;"><i class="fa-solid fa-gauge-high" style="color: #00e0ff;"></i> <h3 data-i18n="interfaceLabel">Interface</h3></div>
+                        <span data-i18n="visualEngine" style="font-size: 9px; color: #00e0ff; border: 1px solid #00e0ff; padding: 2px 8px; border-radius: 4px;">VISUAL ENGINE</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                        <div>
+                            <label data-i18n="motionProfile" style="font-size: 10px; color: #6b6b99; margin-bottom: 15px; display: block;">MOTION PROFILE</label>
+                            <div class="options">
+                                <div class="opt active"><h5 data-i18n="kinetic">Kinetic</h5><span data-i18n="fullParallax">FULL PARALLAX SHADERS</span><i class="fa-solid fa-circle-dot" style="position: absolute; top: 15px; right: 15px;"></i></div>
+                                <div class="opt"><h5 data-i18n="staticProfile">Static</h5><span data-i18n="perfOptimized">PERFORMANCE OPTIMIZED</span><i class="fa-regular fa-circle" style="position: absolute; top: 15px; right: 15px;"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <label data-i18n="infoDensity" style="font-size: 10px; color: #6b6b99; margin-bottom: 15px; display: block;">INFORMATION DENSITY</label>
+                            <div class="toggleBar"><button data-i18n="cozy">COZY</button><button class="active" data-i18n="standard">STANDARD</button><button data-i18n="compact">COMPACT</button></div>
+                            <div style="margin-top: 25px; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 12px;">
+                                <p style="font-size: 11px; margin-bottom: 10px;"><i class="fa-solid fa-layer-group"></i> <span data-i18n="glassBlur">Glass Blur Strength</span></p>
+                                <input type="range" value="70" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="card">
+                        <div class="cardHeader"><i class="fa-solid fa-bolt" style="color: #ff4d6d;"></i> <h3 data-i18n="txCore">Transaction Core</h3></div>
+                        <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 10px;"><span data-i18n="slippageTolerance">Slippage Tolerance</span><span style="color: #ff4d6d; font-weight: bold;">0.5%</span></div>
+                        <input type="range" value="50" style="accent-color: #ff4d6d; margin-bottom: 20px;" />
+                        <div class="toggleBar"><button data-i18n="autoBtn">AUTO</button><button class="active" style="color: #ff4d6d;" data-i18n="fastBtn">FAST</button><button data-i18n="proBtn">PRO</button></div>
+                    </div>
+                    <div class="card">
+                        <div class="cardHeader"><i class="fa-solid fa-shield-halved"></i> <h3 data-i18n="dataPrivacy">Data Privacy</h3></div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 15px;"><span data-i18n="anonymousRpc" style="font-size: 12px; color: #6b6b99;">Anonymous RPC</span><div class="switch on"></div></div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 15px;"><span data-i18n="hideZero" style="font-size: 12px; color: #6b6b99;">Hide Zero Balances</span><div class="switch"></div></div>
+                        <div style="display: flex; justify-content: space-between;"><span data-i18n="telemetry" style="font-size: 12px; color: #6b6b99;">Telemetry</span><div class="switch"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="note"><i class="fa-solid fa-circle-info"></i> <p data-i18n="settingsWarning">Changing advanced settings may affect transaction speed and success rate.</p></div>
+            <div class="btns"><button class="btnText" data-i18n="resetDefault">RESET DEFAULT</button><button class="btnMain" data-i18n="applyChanges">APPLY CHANGES</button></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="navigation.js"></script>
+    <script src="lang.js"></script>
+    <script>
+        document.querySelectorAll('.switch').forEach(s => s.onclick = () => s.classList.toggle('on'));
+        document.querySelectorAll('.toggleBar button').forEach(b => b.onclick = function() {
+            this.parentElement.querySelectorAll('button').forEach(x => x.classList.remove('active'));
+            this.classList.add('active');
+        });
+    </script>
+  </body>
+</html>

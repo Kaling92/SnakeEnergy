@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0d0d1a, #1a0033, #001f4d);
+  color: #e0e0ff;
+  text-align: center;
+}
+
+.formHead h1 {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #383864, #8740c9, #265aa8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.formHead h2 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b3b3cc;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: -30px;
+}
+
+p {
+  margin: 5px 0;
+  color: #b3b3cc;
+}
+.container {
+  background: rgba(20, 20, 40, 0.85);
+  border-radius: 12px;
+  padding: 30px;
+  width: 350px;
+  margin: 40px auto;
+  box-shadow: 0 0 20px rgba(166, 77, 255, 0.6);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.passWordField {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loginField {
+  text-align: left;
+  font-size: 0.8rem;
+  color: #a6a6d2;
+  margin-top: 15px;
+  display: flex;
+}
+#recover {
+  color: #a64dff;
+  text-decoration: none;
+}
+#recover:hover {
+  text-decoration: underline;
+}
+.input input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: none;
+  background: #1a1a33;
+  color: whitesmoke;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.input input:focus {
+  box-shadow: 0 0 8px #a64dff;
+}
+
+#connect {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #a64dff, #4d94ff);
+  border: none;
+  border-radius: 30px;
+  color: #080808;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#connect:hover {
+  transform: scale(1.05);
+}
+
+#connect i{
+    color: black;
+    font-size: 20px;
+}
+
+
+.socialLogin {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.socialLogin button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #26264d;
+  color: #b0aeae;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.socialLogin button:hover {
+  background: #4d4d80;
+}
+
+.signUp {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.signUp a {
+  color: #a64dff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signUp a:hover {
+  text-decoration: underline;
+}

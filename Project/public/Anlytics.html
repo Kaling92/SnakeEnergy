@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analytics</title>
+    <link rel="stylesheet" href="CSS/Homepage.css" />
+    <link rel="stylesheet" href="CSS/Swap.css" />
+    <link rel="stylesheet" href="CSS/Analytics.css" />
+    <link rel="stylesheet" href="CSS/lang.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="left">
+      <div class="title">Snake Energy</div>
+      <div class="profile">
+        <div><img id="userPhoto" src="CSS/user.png" /></div>
+        <div id="userProfile">
+          <label data-i18n="userProfile">User Profile</label>
+          <p id="phoneNumber">0913108937</p>
+        </div>
+      </div>
+      <div class="menu">
+        <div id="menuDashboard" class="menuItem" data-i18n="menuDashboard">
+          <i class="fa-solid fa-th"></i> Dashboard
+        </div>
+        <div id="menuAssets" class="menuItem" data-i18n="menuAssets">
+          <i class="fa-solid fa-wallet"></i> Assets
+        </div>
+        <div id="menuSwap" class="menuItem" data-i18n="menuSwap">
+          <i class="fa-solid fa-arrow-right-arrow-left"></i> Swap
+        </div>
+        <div id="menuAnalytics" class="menuItem" data-i18n="menuAnalytics">
+          <i class="fa-solid fa-chart-line"></i> Analytics
+        </div>
+        <div id="menuNFT" class="menuItem" data-i18n="menuNFT">
+          <i class="fa-solid fa-gem"></i> NFTs
+        </div>
+        <div id="menuTransactions" class="menuItem" data-i18n="menuTransactions">
+          <i class="fa-solid fa-clock-rotate-left"></i> Transactions
+        </div>
+        <div id="menuNotifications" class="menuItem" data-i18n="menuNotifications">
+          <i class="fa-solid fa-bell"></i> Notifications
+        </div>
+        <div id="menuSecurity" class="menuItem" data-i18n="menuSecurity">
+          <i class="fa-solid fa-shield"></i> Security
+        </div>
+        <div id="menuSettings" class="menuItem" data-i18n="menuSettings">
+          <i class="fa-solid fa-gear"></i> Settings
+        </div>
+      </div>
+      <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> <span data-i18n="logout">Log out</span></button>
+    </div>
+    <div class="right">
+      <div class="rightHeader">
+        <div class="rightHeaderLeft">
+          <input
+            id="searchBar"
+            type="text"
+            placeholder="Search Assets, NFTs..."
+          />
+          <div class="langSwitcher">
+            <button id="languageToggle">VI</button>
+          </div>
+        </div>
+        <div class="rightHeaderRight">
+          <div class="headerRightButton">
+            <button id="receive">Receive</button>
+            <button id="send">Send</button>
+          </div>
+          <div class="bell">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="wallet">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+        </div>
+      </div>
+      <div class="portfolioPanel">
+        <div class="portfolioTitle">
+          <div class="portfolioTitleName">
+            <h1 data-i18n="portfolioPulse">PORTFOLIO PULSE</h1>
+            <p data-i18n="realTimeAnalytics">REAL-TIME PERFORMANCE ANALYTICS & ASSET HEALTH</p>
+          </div>
+          <div class="timeFrame">
+            <p>1D</p>
+            <p>1W</p>
+            <p>1M</p>
+            <p>1Y</p>
+            <p>ALL</p>
+          </div>
+        </div>
+        <div class="topGrid">
+          <div class="balanceCard">
+            <div class="balanceCardTitle">
+              <p data-i18n="currentBalance">CURRENT BALANCE</p>
+              <h2 id="totalBalance1">$142,850.62</h2>
+              <p id="balanceChange">-$12,402.10 (8.54%)</p>
+            </div>
+            <div class="describeDot">
+              <div class="dot wallet"></div>
+              <p data-i18n="walletPerformance">WALLET PERFORMANCE</p>
+              <div class="dot market"></div>
+              <p data-i18n="marketAvg">MARKET AVG</p>
+            </div>
+            <div class="chartContainer" style="height: 200px; margin-top: 20px;">
+              <canvas id="performanceChart"></canvas>
+            </div>
+          </div>
+
+          <div class="allocationCard">
+            <p data-i18n="assetAllocation">ASSET ALLOCATION</p>
+
+            <div class="circle"></div>
+
+            <div class="assetList">
+              <div class="assetRow">
+                <div class="assetLeft">
+                  <div class="bar eth"></div>
+                  <div>
+                    <p class="assetName">Ethereum</p>
+                    <p class="assetSub">ETH / LAYER 1</p>
+                  </div>
+                </div>
+
+                <div class="assetRight">
+                  <p id="ethPercent">54.2%</p>
+                  <p id="ethValue">$77,425</p>
+                </div>
+              </div>
+
+              <div class="assetRow">
+                <div class="assetLeft">
+                  <div class="bar btc"></div>
+                  <div>
+                    <p class="assetName">Bitcoin</p>
+                    <p class="assetSub">WBTC / LAYER 1</p>
+                  </div>
+                </div>
+
+                <div class="assetRight">
+                  <p id="btcPercent">31.8%</p>
+                  <p id="btcValue">$45,426</p>
+                </div>
+              </div>
+
+              <div class="assetRow">
+                <div class="assetLeft">
+                  <div class="bar sol"></div>
+                  <div>
+                    <p class="assetName">Solana</p>
+                    <p class="assetSub">SOL / LAYER 1</p>
+                  </div>
+                </div>
+
+                <div class="assetRight">
+                  <p id="solPercent">12.4%</p>
+                  <p id="solValue">$17,713</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TABLE -->
+        <div class="tableCard">
+          <div class="tableTitle">
+            <p data-i18n="assetProfitLoss">ASSET PROFIT/LOSS BREAKDOWN</p>
+            <div class="tableFunction">
+              <i class="fa-solid fa-arrow-down-short-wide"></i>
+              <i class="fa-solid fa-download"></i>
+            </div>
+          </div>
+
+          <div class="tableHeader">
+            <p data-i18n="asset">Asset</p>
+            <p data-i18n="avgEntry">Avg Entry</p>
+            <p data-i18n="price">Current</p>
+            <p data-i18n="qty">Qty</p>
+            <p data-i18n="realized">Realized</p>
+            <p data-i18n="unrealized">Unrealized</p>
+          </div>
+
+         <div class="row">
+      <div class="logo"><img id="ethLogo"/><div><p>Ethereum</p><p>ETH</p></div></div>
+      <p id="ethEntry">$2,329.8</p>
+      <p id="ethCurrentPrice">$0</p>
+      <p id="ethQty">23.5</p>
+      <p class="profit" id="ethRealized">+$0</p>
+      <p class="loss" id="ethUnrealized">-$0</p>
+    </div>
+
+    <div class="row">
+      <div class="logo"><img id="btcLogo"/><div><p>Bitcoin</p><p>BTC</p></div></div>
+      <p id="btcEntry">$80,828</p>
+      <p id="btcCurrentPrice">$0</p>
+      <p id="btcQty">0.7</p>
+      <p class="profit" id="btcRealized">+$0</p>
+      <p class="loss" id="btcUnrealized">-$0</p>
+    </div>
+
+    <div class="row">
+      <div class="logo"><img id="bnbLogo"/><div><p>BNB</p><p>BNB</p></div></div>
+      <p id="bnbEntry">$649.69</p>
+      <p id="bnbCurrentPrice">$0</p>
+      <p id="bnbQty">20</p>
+      <p class="profit" id="bnbRealized">+$0</p>
+      <p class="loss" id="bnbUnrealized">-$0</p>
+    </div>
+
+    <div class="row">
+      <div class="logo"><img id="dogeLogo"/><div><p>Dogecoin</p><p>DOGE</p></div></div>
+      <p id="dogeEntry">$0.109</p>
+      <p id="dogeCurrentPrice">$0</p>
+      <p id="dogeQty">5000</p>
+      <p class="profit" id="dogeRealized">+$0</p>
+      <p class="loss" id="dogeUnrealized">-$0</p>
+    </div>
+
+    <div class="row">
+      <div class="logo"><img id="solLogo"/><div><p>Solana</p><p>SOL</p></div></div>
+      <p id="solEntry">$94.45</p>
+      <p id="solCurrentPrice">$0</p>
+      <p id="solQty">30</p>
+      <p class="profit" id="solRealized">+$0</p>
+      <p class="loss" id="solUnrealized">-$0</p>
+    </div>
+        </div>
+        <!-- BOTTOM -->
+        <div class="bottomGrid">
+          <div class="miniCard">
+            <i class="fa-solid fa-octagon cardIcon"></i>
+            <p data-i18n="activeStakesLabel">ACTIVE STAKES</p>
+            <h3 id="activeStakes">$24,102.00</h3>
+            <p class="subText" style="color: aqua">APY AVG: 6.4%</p>
+            <div class="progressBar">
+              <div class="progressFill"></div>
+            </div>
+          </div>
+
+          <div class="miniCard">
+            <i class="fa-solid fa-leaf cardIcon"></i>
+            <p data-i18n="yieldHarvested">YIELD HARVESTED</p>
+            <h3 id="yield">$1,244.50</h3>
+            <p class="subText" style="color: rgb(174, 43, 226)" data-i18n="lifeTimeEnergy">
+              LIFE-TIME ENERGY
+            </p>
+            <div class="barChart">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <div class="miniCard">
+            <i class="fa-solid fa-droplet cardIcon"></i>
+            <p data-i18n="liquidityScore">LIQUIDITY SCORE</p>
+            <h3 id="liquidity">94/100</h3>
+            <p class="subText" style="color: rgb(206, 3, 3)" data-i18n="optimalPortfolioHealth">
+              OPTIMAL PORTFOLIO HEALTH
+            </p>
+            <p class="note">
+              Your ratio of liquid assets to locked stakes is balanced. Consider
+              hedging 10% more in USDC for market volatility.
+            </p>
+          </div>
+        </div>
+    </div>
+    <script src="navigation.js"></script>
+    <script src="lang.js"></script>
+    <script>
+const assets = [
+  { id:"ethereum", symbol:"eth", entry:2329.8, qty:23.5 },
+  { id:"bitcoin", symbol:"btc", entry:80828, qty:0.7 },
+  { id:"binancecoin", symbol:"bnb", entry:649.69, qty:20 },
+  { id:"dogecoin", symbol:"doge", entry:0.109, qty:5000 },
+  { id:"solana", symbol:"sol", entry:94.45, qty:30 }
+];
+
+async function updateAssets() {
+  try {
+    const ids = assets.map(a=>a.id).join(",");
+    const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${ids}`;
+    const res = await fetch(url);
+    const data = await res.json();
+
+    let totalBalance = 0;
+    const results = {};
+
+    data.forEach(coin=>{
+      const asset = assets.find(a=>a.id===coin.id);
+      if(!asset) return;
+
+      const currentPrice = coin.current_price;
+      const value = currentPrice * asset.qty;
+      const unrealized = (currentPrice - asset.entry) * asset.qty;
+      totalBalance += value;
+
+      results[asset.symbol] = { value, currentPrice, unrealized, image: coin.image };
+
+      // Update table row
+      document.getElementById(asset.symbol+"CurrentPrice").textContent = `$${currentPrice.toLocaleString()}`;
+      document.getElementById(asset.symbol+"Unrealized").textContent = `${unrealized>=0?'+':'-'}$${Math.abs(unrealized).toLocaleString()}`;
+      document.getElementById(asset.symbol+"Logo").src = coin.image;
+    });
+
+    // Update Top Balance
+    document.getElementById('totalBalance1').textContent = `$${totalBalance.toLocaleString(undefined, {minimumFractionDigits:2})}`;
+
+    // Update Allocation
+    const ethP = (results.eth.value / totalBalance) * 100;
+    const btcP = (results.btc.value / totalBalance) * 100;
+    const solP = (results.sol.value / totalBalance) * 100;
+
+    document.getElementById('ethPercent').textContent = ethP.toFixed(1) + '%';
+    document.getElementById('btcPercent').textContent = btcP.toFixed(1) + '%';
+    document.getElementById('solPercent').textContent = solP.toFixed(1) + '%';
+    
+    document.getElementById('ethValue').textContent = `$${results.eth.value.toLocaleString(undefined, {maximumFractionDigits:0})}`;
+    document.getElementById('btcValue').textContent = `$${results.btc.value.toLocaleString(undefined, {maximumFractionDigits:0})}`;
+    document.getElementById('solValue').textContent = `$${results.sol.value.toLocaleString(undefined, {maximumFractionDigits:0})}`;
+
+    // Update Chart (Conic Gradient)
+    const chart = document.querySelector('.circle');
+    if(chart) {
+        chart.style.background = `conic-gradient(#a64dff 0% ${ethP}%, #00dbe9 ${ethP}% ${ethP+btcP}%, #ff4d6d ${ethP+btcP}% 100%)`;
+    }
+
+  } catch (e) {
+    console.log("Analytics data error");
+  }
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+  updateAssets();
+  setInterval(updateAssets,30000);
+});
+</script>
+
+      <script>
+      // SIMPLE CHART SETUP
+      const ctx = document.getElementById('performanceChart').getContext('2d');
+      
+      // Create a nice gradient for the line
+      const gradient = ctx.createLinearGradient(0, 0, 0, 200);
+      gradient.addColorStop(0, 'rgba(166, 77, 255, 0.4)');
+      gradient.addColorStop(1, 'rgba(166, 77, 255, 0)');
+
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00'],
+          datasets: [{
+            label: 'Wallet Performance',
+            data: [120000, 125000, 123000, 128000, 126000, 130000, 125426],
+            borderColor: '#a64dff',
+            backgroundColor: gradient,
+            fill: true,
+            tension: 0.4,
+            pointRadius: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { grid: { display: false }, ticks: { color: '#6b6b99', font: { size: 10 } } },
+            y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { display: false } }
+          }
+        }
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+/* Language Switcher Styles */
+.langSwitcher {
+  display: flex;
+  align-items: center;
+}
+
+#languageToggle {
+  background: rgba(166, 85, 247, 0.15);
+  border: 1px solid rgba(166, 85, 247, 0.4);
+  color: #d1d5db;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 60px;
+  text-align: center;
+  outline: none;
+}
+
+#languageToggle:hover {
+  background: rgba(166, 85, 247, 0.25);
+  border-color: rgba(166, 85, 247, 0.6);
+  color: #f3f4f6;
+}
+
+#languageToggle:focus {
+  background: rgba(166, 85, 247, 0.3);
+  border-color: #a855f7;
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+}
+
+#languageToggle {
+  margin-left: 8px;
+}
+

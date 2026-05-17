@@ -1,0 +1,380 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top left, #120a2a, #070714 60%);
+  color: white;
+}
+
+/* PAGE */
+.systemPage {
+  padding: 20px;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* HEADER */
+.systemHeader h1 {
+  font-size: 46px;
+  text-shadow: 0 0 5px;
+}
+
+.systemHeader p {
+  color: #888;
+  font-size: 18px;
+}
+
+/* LAYOUT */
+.systemLayout {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* LEFT */
+.leftCol {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* RIGHT */
+.rightCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* TOP CARDS */
+.topCards {
+  display: flex;
+  gap: 20px;
+}
+
+/* PROFILE */
+.profileBox {
+  background: #11112a;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* AVATAR */
+.avatarWrap {
+  position: relative;
+  display: inline-block;
+}
+
+#avatar {
+  width: 120px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.avatarWrap:hover #avatar {
+  transform: scale(1.1);
+}
+
+.editIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #a64dff;
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 14px;
+  border: solid 5px black;
+}
+
+/* TEXT */
+#username {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: large;
+}
+
+#role {
+  font-size: 11px;
+  color: #a64dff;
+}
+
+/* INPUT */
+.inputBox {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.inputBox p {
+  font-size: 10px;
+  color: #777;
+  font-weight: 800;
+}
+
+.inputBox input,
+.inputBox select {
+  width: 90%;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #1a1a33;
+  border: none;
+  color: white;
+}
+
+/* INTERFACE */
+.interfaceBox {
+  background: #11112a;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.interfaceBox p{
+    font-size: large;
+    font-weight: 600;
+}
+
+.modeToggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: x-large;
+}
+
+/* CARDS */
+.cardBox {
+  flex: 1;
+  background: #11112a;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.pinkBorder {
+  border: 1px solid rgba(255,100,130,0.3);
+}
+
+/* ICON */
+.cardIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.blue { background: #00e0ff; }
+.pink { background: #ff6b98; }
+
+/* TEXT */
+.cardTitle {
+  font-size: large;
+  font-weight: 600;
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: #777;
+}
+
+/* SWITCH */
+.switch {
+  width: 40px;
+  height: 20px;
+  background: #222;
+  border-radius: 20px;
+  position: relative;
+}
+
+.switch::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #00e0ff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+.switch.on::after {
+  left: 22px;
+}
+
+/* CARD BOTTOM */
+.cardBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-weight: 700;
+}
+
+.activeText {
+  font-size: 14px;
+  color: #00e0ff;
+}
+
+/* BUTTON */
+.outlineBtn {
+  margin-top: 20px;
+  background: transparent;
+  border: 0.1px solid #5c2d48;
+  color: #ea65a1;
+  padding: 20px 25px;
+  border-radius: 8px;
+  transition: 0.25s;
+  font-weight: 600;
+  font-size: 14px;
+  width: 100%;
+}
+
+.outlineBtn:hover {
+  background: rgba(166,77,255,0.1);
+}
+
+.outlineBtn.small {
+  padding: 6px 10px;
+}
+
+/* PASSWORD */
+.passwordBox {
+  background: #11112a;
+  border-radius: 16px;
+  padding: 20px;
+}
+.passwordBox p:first-child, #first{
+    font-size: large;
+    font-weight: 600;
+}
+
+.passTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub, .strengthRow p:first-child {
+  font-size: 12px;
+  color: #777;
+}
+
+.strengthBar {
+  height: 6px;
+  background: #222;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.fill {
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(90deg,#00e0ff,#a64dff,#ff6b98);
+}
+
+.strengthRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.rotateBtn {
+  margin-top: 20px;
+  background: transparent;
+  border: 0.1px solid #571764;
+  color: #c943f2;
+  padding: 16px 35px;
+  border-radius: 20px;
+  transition: 0.25s;
+  font-weight: 600;
+  font-size: 11px;
+}
+.rotateBtn:hover{
+    transform: scale(1.1);
+    background: #430552 ;
+}
+.good {
+  color: #00e0ff;
+  font-size: 11px;
+}
+
+/* DEVICES */
+.deviceBox {
+  background: #11112a;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.device {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  background: #0c0c1f;
+  margin-top: 10px;
+}
+
+.current {
+  background: #011d20;
+  border: none;
+  padding: 2px 10px;
+  border-radius: 6px;
+  color: #00e0ff;
+}
+
+.revoke {
+  background: transparent;
+  color: #a10b27;
+  border: none;
+}
+
+.revoke:hover{
+    color: #e01f1f;
+}
+/* LOGOUT */
+.logout {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 11px;
+  color: #777;
+}
+
+.logout:hover{
+    color: white;
+    font-weight: 500;
+}
+/* DANGER */
+.dangerBox {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #11112a;
+  padding: 20px;
+  border-radius: 16px;
+  border-left: 1px solid rgba(247, 9, 57, 0.936);
+}
+
+.dangerTitle {
+  color: #fb5e7b;
+  font-size: large;
+  font-weight: 700;
+}
+
+.dangerDesc {
+  font-size: 14px;
+  color: #d6d6d6;
+}
+
+.wipeBtn {
+  background: #a31236;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: fit-content;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: large;
+}
+.wipeBtn:hover{
+    background:#c83a5d ;
+}

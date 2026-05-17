@@ -1,0 +1,372 @@
+.mainSendSection {
+  display: flex;
+}
+.leftSendBox {
+  width: 80%;
+  background: rgba(20, 20, 40, 0.9);
+  border-radius: 12px;
+  padding: 20px;
+  padding-bottom: 50px;
+  margin-top: 20px;
+  box-shadow: 0 0 12px rgba(166, 77, 255, 0.3);
+  height: fit-content;
+}
+
+.transactionHubTitle p {
+  font-size: 0.75rem;
+  color: #00dbe9;
+  margin: 20px 0 0;
+}
+.transactionHubTitle h1 {
+  font-size: 40px;
+  font-weight: bold;
+  background: linear-gradient(to right, #7df4ff, #de8aff, #2f319a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 8px 0;
+}
+
+.sendBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Address input */
+.address {
+  display: block;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 10px;
+}
+.address p {
+  font-size: 0.8rem;
+  color: #b3b3cc;
+  margin-bottom: 20px;
+}
+#enterAdress {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  background: #2d1346;
+  color: #e0e0ff;
+  font-size: 0.85rem;
+  width: 90%;
+}
+#enterAdress::placeholder {
+  color: #777799;
+}
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.inputWrapper i,
+a {
+  position: absolute;
+  right: 10px;
+  color: #a64dff;
+  font-size: 1rem;
+}
+.inputWrapper i:hover {
+  transform: scale(1.5);
+}
+
+/* Asset + Amount */
+.assetAndAmount {
+  display: flex;
+  gap: 15px;
+}
+.asset,
+.amount {
+  flex: 1;
+  border-radius: 8px;
+  padding: 10px;
+   margin-bottom: 20px;
+}
+.asset p,
+.amount p {
+  font-size: 0.8rem;
+  color: #b3b3cc;
+  margin-bottom: 20px;
+}
+#asset {
+  width: 95%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #2d1346;
+  color: #e0e0ff;
+  font-size: 0.85rem;
+}
+.asset i {
+  color: #a64dff;
+  margin-left: 6px;
+}
+#amount {
+  width: 95%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #2d1346;
+  color: #e0e0ff;
+  font-size: 0.85rem;
+}
+.amount a {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #4da6ff;
+  cursor: pointer;
+}
+
+/* Fee box */
+.feeBox {
+  background: #1a1a33;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.feeBoxTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.networkFee {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.feeBox i {
+  color: #4da6ff;
+  font-size: 0.9rem;
+}
+.feeBox p {
+  font-size: 0.8rem;
+  color: #b3b3cc;
+}
+#fee {
+  color: #00dbe9;
+}
+.slider-container {
+  margin-top: 8px;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+   background: linear-gradient(to right, #7df4ff, #de8aff, #2f319a); /* fill + empty */
+}
+
+/* hide knob */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+}
+
+
+
+.range {
+  display: flex;
+  justify-content: space-between;
+}
+#economy {
+  color: #b3b3cc;
+  font-size: 0.75rem;
+}
+#standard {
+  color: #00dbe9;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+#instant {
+  color: #b3b3cc;
+  font-size: 0.75rem;
+}
+
+/* Confirm button */
+#confirmAndSend {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #a64dff, #4d94ff);
+  border: none;
+  border-radius: 30px;
+  color: #080808;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#confirmAndSend:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(145, 76, 224, 1),
+    rgba(77, 148, 255, 1)
+  );
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(166, 77, 255, 0.6);
+}
+#confirmAndSend i {
+  font-size: 1rem;
+}
+
+/*right section*/
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at top left, #1a1333, #0b0a1f 60%);
+    color: #fff;
+}
+
+.rightSection {
+    width: 38%;
+    padding: 20px;
+}
+
+/* Card base */
+.availableBalance,
+.recentDestination {
+    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+    border-radius: 20px;
+    padding: 18px; 
+    margin-bottom: 18px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Available Balance label */
+.availableBalance p:first-child {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #9ca3af;
+    margin-bottom: 4px; 
+}
+
+/* Balance row */
+.balanceValue {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+/* Divider line tighter */
+.balance {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 6px;
+    margin-bottom: 6px; 
+}
+
+/* Balance numbers */
+#balance {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1; 
+    color: white;
+    margin-top: 20px;
+}
+
+#currency {
+    font-size: 18px;
+    color: #a855f7;
+    font-weight: 600;
+}
+
+#realValueUSD {
+    font-size: 11px;
+    color: #6b7280;
+    margin-top: 1px;
+}
+
+/* High / Low */
+.highLow {
+    display: flex;
+    gap: 80px; 
+    margin-top: 18px;
+}
+
+.high p:first-child,
+.low p:first-child {
+    font-size: 11px;
+    color: #6b7280;
+    margin-bottom: 3px;
+}
+
+#high {
+    color: #00e0ff;
+    font-weight: 600;
+}
+
+#low {
+    color: #ff4d6d;
+    font-weight: 600;
+}
+
+/* Recent Destination title */
+.recentDestinationTitle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.recentDestinationTitle i {
+    color: #00e0ff;
+}
+
+/* Address list */
+.recentAddressbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px; 
+}
+
+.recentAddressbox:hover {
+    transform: scale(1.05); 
+}
+
+/* Divider */
+.recentAddressbox:not(:last-child) {
+    border-bottom: 2px solid rgba(255,255,255,0.05);
+}
+
+/* Avatar */
+.recentAddressbox img {
+    width: 32px;  
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff4d6d, #9333ea);
+    margin-right: 10px;
+}
+
+/* Address text */
+.address {
+    flex: 1;
+}
+
+#recentName {
+    font-size: 13px;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+#recentAddress {
+    font-size: 11px;
+    color: #6b7280;
+}
+
+/* Arrow */
+.recentAddressbox i {
+    color: #6b7280;
+    font-size: 13px;
+}

@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swap</title>
+    <link rel="stylesheet" href="CSS/Homepage.css" />
+    <link rel="stylesheet" href="CSS/Swap.css" />
+    <link rel="stylesheet" href="CSS/Receive.css" />
+    <link rel="stylesheet" href="CSS/Send.css" />
+    <link rel="stylesheet" href="CSS/lang.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="left">
+      <div class="title">Snake Energy</div>
+      <div class="profile">
+        <div><img id="userPhoto" src="CSS/user.png" /></div>
+        <div id="userProfile">
+          <label data-i18n="userProfile">User Profile</label>
+          <p id="phoneNumber">0913108937</p>
+        </div>
+      </div>
+      <div class="menu">
+        <div id="menuDashboard" class="menuItem" data-i18n="menuDashboard">
+          <i class="fa-solid fa-th"></i> Dashboard
+        </div>
+        <div id="menuAssets" class="menuItem" data-i18n="menuAssets">
+          <i class="fa-solid fa-wallet"></i> Assets
+        </div>
+        <div id="menuSwap" class="menuItem" data-i18n="menuSwap">
+          <i class="fa-solid fa-arrow-right-arrow-left"></i> Swap
+        </div>
+        <div id="menuAnalytics" class="menuItem" data-i18n="menuAnalytics">
+          <i class="fa-solid fa-chart-line"></i> Analytics
+        </div>
+        <div id="menuNFT" class="menuItem" data-i18n="menuNFT">
+          <i class="fa-solid fa-gem"></i> NFTs
+        </div>
+        <div id="menuTransactions" class="menuItem" data-i18n="menuTransactions">
+          <i class="fa-solid fa-clock-rotate-left"></i> Transactions
+        </div>
+        <div id="menuNotifications" class="menuItem" data-i18n="menuNotifications">
+          <i class="fa-solid fa-bell"></i> Notifications
+        </div>
+        <div id="menuSecurity" class="menuItem" data-i18n="menuSecurity">
+          <i class="fa-solid fa-shield"></i> Security
+        </div>
+        <div id="menuSettings" class="menuItem" data-i18n="menuSettings">
+          <i class="fa-solid fa-gear"></i> Settings
+        </div>
+      </div>
+      <button id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> <span data-i18n="logout">Log out</span></button>
+    </div>
+    <div class="right">
+      <div class="rightHeader">
+        <div class="rightHeaderLeft">
+          <input
+            id="searchBar"
+            type="text"
+            placeholder="Search Assets, NFTs..."
+          />
+          <div class="langSwitcher">
+            <button id="languageToggle">VI</button>
+          </div>
+        </div>
+        <div class="rightHeaderRight">
+          <div class="headerRightButton">
+            <button id="receive">Receive</button>
+            <button id="send">Send</button>
+          </div>
+          <div class="bell">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="wallet">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+        </div>
+      </div>
+      <div class="righPanel">
+        <div class="swapTitle">
+          <h1 data-i18n="swapTitleMain">Liquid Snake Swap</h1>
+          <p data-i18n="swapDescText">
+            Exchange token instantly with zero slippage across the kinetic
+            nebula liquidity pools.
+          </p>
+        </div>
+        <div class="container">
+          <div class="transactionRoute">
+            <p data-i18n="txRoute">TRANSACTION ROUTE</p>
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <div class="from">
+            <div class="fromNameandAmount">
+              <p data-i18n="sell">SELL</p>
+              <p id="fromAmount" contenteditable="true">0.5</p>
+              <p id="usdEqual">~$0.00</p>
+            </div>
+
+            <div class="crypType">
+              <div>
+                <p data-i18n="balanceTxt">Balance:</p>
+                <p id="balanceAmount">1.428</p>
+                <p id="fromCurrency">ETH</p>
+              </div>
+              <div class="cryptoDropdown">
+                <img src="" />
+                <select id="fromCryptoList">
+                  <option>ETH</option>
+                  <option>BTC</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="switchIcon">
+            <i class="fa-solid fa-arrow-down-up-across-line"></i>
+          </div>
+
+          <div class="to">
+            <div class="toNamendAmount">
+              <p data-i18n="buy">BUY</p>
+              <p id="toAmount">0.00</p>
+              <div id="fromEqualTo">
+                <p>1</p>
+                <p id="fromCurrency">ETH =</p>
+                <p id="fromEqual">0.00</p>
+                <p id="toCurrency">BTC</p>
+              </div>
+            </div>
+
+            <div class="crypType">
+              <div>
+                <p data-i18n="balanceTxt">Balance:</p>
+                <p id="balanceAmount">2,400</p>
+                <p id="currency">USDC</p>
+              </div>
+              <div class="cryptoDropdown">
+                <img src="" />
+                <select id="toCryptoList">
+                  <option>ETH</option>
+                  <option>ETH</option>
+                  <option>BTC</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="billing">
+            <div class="exchangeRate">
+              <p data-i18n="exchangeRateLabel">Exchange Rate</p>
+              <p id="exchangeRate">1 ETH = 2,491.00 SNAKE</p>
+            </div>
+            <div class="Slippage Tolerance">
+              <p data-i18n="slippageTolerance">Slippage Tolerance</p>
+              <p id="tolerance">0.5%</p>
+            </div>
+            <div class="networkFee">
+              <p data-i18n="networkFeeLabel">Network Fee</p>
+              <p id="networkFee">$4.12</p>
+            </div>
+          </div>
+          <button id="confirmSwap">
+            <i class="fa-solid fa-bolt"></i> <span data-i18n="confirmSwapText">Confirm swap</span>
+          </button>
+        </div>
+      </div>
+      <div class="rightInfoCards">
+        <div class="infoCard" id="priceActionCard">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          <h2 data-i18n="priceAction">Price Action</h2>
+          <p>ETH/SNAKE is up 12% in the last 24 hours.</p>
+        </div>
+        <div class="infoCard" id="liquidityCard">
+          <i class="fa-solid fa-droplet"></i>
+          <h2 data-i18n="liquidityScore">Liquidity Score</h2>
+          <p>Excellent liquidity. Transaction impact: < 0.01%.</p>
+        </div>
+        <div class="infoCard" id="verifiedPoolCard">
+          <i class="fa-solid fa-shield"></i>
+          <h2 data-i18n="verifiedPool">Verified Pool</h2>
+          <p>Audit complete by Snake Shield Labs (v2.4).</p>
+          <button class="auditBtn" id="auditBtn" data-i18n="viewAuditReport">VIEW AUDIT REPORT</button>
+        </div>
+      </div>
+    </div>
+    <script src="navigation.js"></script>
+    <script src="lang.js"></script>
+    <script>
+      let prices = {};
+      let symbols = {};
+      let holdings = ["ethereum", "bitcoin", "solana"];
+
+      async function loadData() {
+        const url =
+          "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=20&page=1";
+        const res = await fetch(url);
+        const data = await res.json();
+
+        data.forEach((coin) => {
+          prices[coin.id] = coin.current_price;
+          symbols[coin.id] = coin.symbol.toUpperCase();
+        });
+
+        const sellSelect = document.getElementById("fromCryptoList");
+        sellSelect.options.length = 0;
+        holdings.forEach((id) => {
+          if (prices[id]) {
+            sellSelect.add(new Option(symbols[id], id));
+          }
+        });
+
+        const buySelect = document.getElementById("toCryptoList");
+        buySelect.options.length = 0;
+        data.forEach((coin) => {
+          buySelect.add(new Option(coin.symbol.toUpperCase(), coin.id));
+        });
+
+        calculate();
+      }
+
+      function calculate() {
+        const sellToken = document.getElementById("fromCryptoList").value;
+        const buyToken = document.getElementById("toCryptoList").value;
+        const sellAmount = parseFloat(
+          document.getElementById("fromAmount").innerText,
+        );
+
+        if (!sellAmount || sellAmount <= 0) {
+          document.getElementById("usdEqual").innerText = "~$0.00";
+          document.getElementById("toAmount").innerText = "0.00";
+          return;
+        }
+
+        const usdValue = sellAmount * prices[sellToken];
+        const buyAmount = usdValue / prices[buyToken];
+
+        document.getElementById("usdEqual").innerText =
+          "~$" + usdValue.toFixed(2);
+        document.getElementById("toAmount").innerText = buyAmount.toFixed(6);
+        document.getElementById("exchangeRate").innerText =
+          `1 ${symbols[sellToken]} = ${(prices[sellToken] / prices[buyToken]).toFixed(6)} ${symbols[buyToken]}`;
+      }
+
+      document
+        .getElementById("fromAmount")
+        .addEventListener("input", calculate);
+      document
+        .getElementById("fromCryptoList")
+        .addEventListener("change", calculate);
+      document
+        .getElementById("toCryptoList")
+        .addEventListener("change", calculate);
+
+      loadData();
+    </script>
+  </body>
+</html>
