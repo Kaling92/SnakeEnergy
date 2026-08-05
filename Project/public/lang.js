@@ -569,7 +569,7 @@ function setLanguage(lang) {
   localStorage.setItem('language', lang);
   const data = translations[lang] || translations.en;
   
-  // Elements with specific handling
+ 
   const searchBar = document.getElementById('searchBar');
   if (searchBar) searchBar.placeholder = data.searchPlaceholder || searchBar.placeholder;
   
@@ -579,7 +579,7 @@ function setLanguage(lang) {
   const sendBtn = document.getElementById('send');
   if (sendBtn) sendBtn.textContent = data.send || sendBtn.textContent;
   
-  // Generic translation using data-i18n
+
   document.querySelectorAll('[data-i18n]').forEach((elem) => {
     const key = elem.dataset.i18n;
     if (data[key]) {
@@ -605,7 +605,6 @@ function setLanguage(lang) {
     }
   });
 
-  // Update button text if it exists
   const langToggle = document.getElementById('languageToggle');
   if (langToggle) {
     langToggle.textContent = lang === 'en' ? 'VI' : 'EN';

@@ -1,0 +1,300 @@
+/* ==========================================
+   Base Layout & Page Background
+   ========================================== */
+.auth-body {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 24px 16px 40px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0d0d1a, #1a0033, #001f4d);
+  color: #e0e0ff;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+  display: block;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* ==========================================
+   Language Switcher
+   ========================================== */
+.auth-body .langSwitcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.auth-body .langSwitcher button {
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* ==========================================
+   Header Typography
+   ========================================== */
+.auth-body .formHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.auth-body .formHead h1 {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 0;
+  background: linear-gradient(135deg, #383864, #8740c9, #265aa8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  line-height: 1.1;
+}
+
+.auth-body .formHead h2 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b3b3cc;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.auth-body p {
+  margin: 5px 0;
+  color: #b3b3cc;
+}
+
+/* ==========================================
+   Main Form Card Container
+   ========================================== */
+.auth-body .container {
+  background: rgba(20, 20, 40, 0.85);
+  border-radius: 12px;
+  padding: 40px 30px;
+  width: 100%;                 
+  max-width: 520px;             
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(166, 77, 255, 0.6);
+  display: flex;                
+  flex-direction: column;       
+  box-sizing: border-box;       
+}
+
+.auth-body #accessVault {
+  font-size: 1.0rem;
+  font-weight: lighter;
+  color: #f6ecec;
+  margin-bottom: 10px;
+}
+
+/* ==========================================
+   Form Content Layout Wrapper
+   ========================================== */
+.auth-body .form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 440px;            /* Keeps all inputs and layout elements locked together */
+  margin: 0 auto;              
+  text-align: left;            
+}
+
+/* ==========================================
+   Form Fields & Inputs
+   ========================================== */
+.auth-body .loginField {
+  text-align: left;
+  font-size: 0.8rem;
+  color: #a6a6d2;
+  margin-top: 0;
+}
+
+.auth-body .passwordField {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  width: 100%;          
+  box-sizing: border-box;
+  margin-top: 4px;
+}
+
+.auth-body #recover {
+  color: #a64dff;
+  text-decoration: none;
+}
+
+.auth-body #recover:hover {
+  text-decoration: underline;
+}
+
+.auth-body .input {
+  width: 100%;
+}
+
+.auth-body .input input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: none;
+  background: #1a1a33;
+  color: whitesmoke;
+  outline: none;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease;
+}
+
+.connect {
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #a64dff, #4d94ff);
+  border: none;
+  border-radius: 30px;
+  color: #080808;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.connect:hover {
+  transform: scale(1.05);
+}
+
+.connect i{
+    color: black;
+    font-size: 20px;
+}
+
+.auth-body .input input:focus {
+  box-shadow: 0 0 8px #a64dff;
+}
+
+/* ==========================================
+   Action Buttons
+   ========================================== */
+.auth-body .connect {
+  width: 100%;
+  padding: 16px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, #a64dff, #4d94ff);
+  border: none;
+  border-radius: 30px;
+  color: #080808;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease;
+}
+
+.auth-body .connect:hover {
+  transform: scale(1.02);
+}
+
+.auth-body .connect i {
+  color: black;
+  font-size: 18px;
+}
+
+/* ==========================================
+   Social Provider Logins
+   ========================================== */
+.auth-body .socialLogin {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  gap: 12px;
+}
+
+.auth-body .socialLogin button {
+  flex: 1;
+  margin: 0;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #26264d;
+  color: #b0aeae;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.auth-body .socialLogin button:hover {
+  background: #4d4d80;
+  color: #fff;
+}
+
+/* ==========================================
+   Sign Up Footer Area
+   ========================================== */
+.auth-body .signUp {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.auth-body .signUp p {
+  color: #a64dff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-body .signUp a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   Responsive Media Queries
+   ========================================== */
+@media (max-width: 640px) {
+  .auth-body {
+    padding: 20px 12px 32px;
+  }
+
+  .auth-body .container {
+    width: min(100%, 92vw);
+    padding: 24px;
+  }
+
+  .auth-body .formHead h1 {
+    font-size: 38px;
+  }
+
+  .auth-body .signUp {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .auth-body .socialLogin {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

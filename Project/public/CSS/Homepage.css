@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -7,6 +16,7 @@ body {
   min-height: 100vh;
   gap: 10px;
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 i:hover {
@@ -15,9 +25,11 @@ i:hover {
 /* Sidebar */
 .left {
   padding: 15px;
+  min-width: 220px;
   width: 15%;
   text-align: left;
   background: rgba(20, 20, 40, 0.95);
+  flex-shrink: 0;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(166, 77, 255, 0.3);
   display: flex;
@@ -104,13 +116,26 @@ i:hover {
 /* Right panel */
 .right {
   flex: 1;
-  width: 78%;
+  min-width: 0;
+  width: 75%;
   display: flex;
   flex-direction: column;
   background: rgba(46, 2, 88, 0.9);
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 0 12px rgba(166, 77, 255, 0.3);
+  overflow-x: hidden;
+}
+
+.righMarket {
+  min-width: 0;
+  width: 100%;
+}
+
+.marketTable,
+.activity,
+.assets {
+  min-width: 0;
 }
 
 /* Header */
@@ -123,7 +148,8 @@ i:hover {
 
 #searchBar {
   border-radius: 15px;
-  width: 400px;
+  width: min(100%, 420px);
+  min-width: 0;
   height: 32px;
   padding: 6px 12px;
   border: none;
@@ -139,12 +165,16 @@ i:hover {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .rightHeaderRight {
   display: flex;
   align-items: center;
   gap: 20px;
+  min-width: 0;
+  flex: 0 0 auto;
 }
 .rightHeaderRight i {
   font-size: 1rem;
@@ -246,17 +276,37 @@ i:hover {
 .righMarket {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-auto-columns: minmax(0, 1fr);
   gap: 15px;
   margin-top: 15px;
+  min-width: 0;
 }
 
 .rightPrice,
 .rightPriceActivity,
-.rightMarketList {
+.rightMarketList,
+.marketHeader,
+.marketRow,
+.rightPriceTopHolding,
+.rightInfoCards {
   background: rgba(20, 20, 40, 0.85);
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 0 10px rgba(166, 77, 255, 0.3);
+  min-width: 0;
+  width: 100%;
+}
+
+.rightPriceActivity,
+.rightMarketList {
+  background: rgba(20, 20, 40, 0.85);
+}
+
+.rightMarketList {
+  grid-column: span 2;
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
 }
 
 .rightMarketList {
@@ -317,6 +367,7 @@ i:hover {
   color: #a6a6d2;
   font-size: 0.75rem;
   line-height: 1.4;
+  min-width: 0;
 }
 
 .marketHeader span {
@@ -412,9 +463,164 @@ i:hover {
 #allAssests:hover {
   text-decoration: underline;
 }
+@media (max-width: 1120px) {
+  body {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .rightHeader {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .rightHeaderLeft {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #searchBar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .rightHeaderRight {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .righMarket,
+  .rightInfoCards,
+  .rightMarketList {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    min-width: 0;
+  }
+
+  .marketHeader,
+  .marketRow,
+  .rightPriceTopHolding {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    min-width: 0;
+  }
+
+  .assets,
+  .activity,
+  .marketTable {
+    max-height: none;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 16px;
+  }
+
+  .left {
+    padding: 15px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .menuItem {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .right {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .rightHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rightHeaderLeft,
+  .rightHeaderRight {
+    width: 100%;
+  }
+
+  #searchBar {
+    max-width: 100%;
+  }
+
+  .totalBalanceBox {
+    padding: 12px;
+  }
+
+  .calculateEarn {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  #receive,
+  #send {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .rightInfoCards,
+  .righMarket,
+  .rightMarketList,
+  .marketHeader,
+  .marketRow,
+  .rightPriceTopHolding {
+    min-width: 0;
+    width: 100% !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .marketTable {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .rightMarketList {
+    grid-column: span 1;
+    overflow-x: hidden;
+  }
+
+  .marketRow span,
+  .marketHeader span {
+    justify-content: flex-start;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  .rightInfoCards {
+    grid-template-columns: 1fr;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.assetInfo h1 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.assetInfo p {
+  margin: 0;
+}
 
 .assetsBox,
-.activityBox {
+.Boxactivity {
   border-radius: 10px;
   padding: 10px;
   display: flex;

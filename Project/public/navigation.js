@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuDashboard: 'Homepage.html',
     menuAssets: 'Assets.html',
     menuSwap: 'Swap.html',
-    menuAnalytics: 'Anlytics.html',
+    menuAnalytics: 'Analytics.html',
     menuNFT: 'NFT.html',
     menuTransactions: 'Transactions.html',
     menuNotifications: 'Notifications.html',

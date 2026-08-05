@@ -1,9 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #0d0d1a, #1a0033, #001f4d);
   color: #e0e0ff;
   text-align: center;
+  overflow-x: hidden;
+  display: block;
 }
 
 .formHead h1 {
@@ -35,9 +45,10 @@ p {
   background: rgba(20, 20, 40, 0.85);
   border-radius: 12px;
   padding: 30px;
-  width: 350px;
+  width: min(100%, 420px);
   margin: 40px auto;
   box-shadow: 0 0 20px rgba(166, 77, 255, 0.6);
+  max-width: 100%;
 }
 
 .title {
@@ -110,6 +121,64 @@ p {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100%, 92vw);
+    padding: 24px;
+    margin: 20px auto;
+  }
+
+  .formHead h1 {
+    font-size: 38px;
+  }
+
+  .formHead h2 {
+    margin-top: -20px;
+  }
+
+  .loginField {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .socialLogin {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100%, 92vw);
+    padding: 24px;
+    margin: 20px auto;
+  }
+
+  .formHead h1 {
+    font-size: 38px;
+  }
+
+  .formHead h2 {
+    margin-top: -20px;
+  }
+
+  .loginField {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  #connect {
+    padding: 18px;
+  }
+
+  .socialLogin {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 .socialLogin button {

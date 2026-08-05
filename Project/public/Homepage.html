@@ -302,23 +302,18 @@
     </div>
     <script src="navigation.js"></script>
     <script>
-      // User portfolio holdings - these would typically come from a backend API
       const userHoldings = {
         ethereum: 12.42,
         bitcoin: 2.14,
-        snake: 1400000  // SNK token - using a demo price since it might not be on CoinGecko
+        snake: 1400000  
       };
 
-      // Fetch real-time crypto prices and update portfolio
       async function fetchPortfolioData() {
         try {
           // Fetch prices for ETH and BTC from CoinGecko
           const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum,bitcoin&vs_currencies=usd&include_24hr_change=true');
           const prices = await response.json();
 
-          // Add demo price for SNK (Snake Energy token)
-          // In a real app, this would come from your token's API or DEX
-          // For now, using a fixed demo price - you can replace this with real API call
           prices.snake = {
             usd: 0.000267,  // Demo price - $0.000267 per SNK
             usd_24h_change: 18.2  // Demo 24h change

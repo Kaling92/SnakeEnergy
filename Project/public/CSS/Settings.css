@@ -1,8 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: radial-gradient(circle at top left, #120a2a, #070714 60%);
   color: white;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
 }
 
 /* PAGE */
@@ -377,4 +388,81 @@ body {
 }
 .wipeBtn:hover{
     background:#c83a5d ;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.systemPage {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.systemLayout,
+.leftCol,
+.rightCol,
+.cardBox,
+.profileBox,
+.passwordBox,
+.deviceBox,
+.dangerBox,
+.interfaceBox,
+.inputBox input,
+.inputBox select,
+.rotateBtn,
+.outlineBtn {
+  min-width: 0;
+}
+
+@media (max-width: 1120px) {
+  .systemLayout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .leftCol,
+  .rightCol {
+    width: 100%;
+  }
+
+  .topCards {
+    flex-direction: column;
+  }
+
+  .dangerBox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    display: block;
+  }
+
+  .systemHeader h1 {
+    font-size: 32px;
+  }
+
+  .profileBox,
+  .interfaceBox,
+  .cardBox,
+  .passwordBox,
+  .deviceBox,
+  .dangerBox {
+    padding: 16px;
+  }
+
+  .passTop {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .device {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
