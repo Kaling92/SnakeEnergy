@@ -57,7 +57,7 @@ const Homepage = () => {
           return;
         }
         const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5000/api/wallet/dashboard', {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/wallet/dashboard`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.data?.success) {

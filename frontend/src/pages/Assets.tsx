@@ -45,7 +45,7 @@ const Assets = () => {
           return;
         }
 
-        const res = await axios.get('http://localhost:5000/api/wallet/assets', {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/wallet/assets`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 

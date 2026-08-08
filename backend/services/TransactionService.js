@@ -194,14 +194,15 @@ class TransactionService {
       let txHash;
       try {
         // Send transaction to python blockchain mempool
-        await axios.post('http://localhost:5001/transactions/new', {
+        const BLOCKCHAIN_URL = process.env.BLOCKCHAIN_URL || 'http://localhost:5001';
+        await axios.post(`${BLOCKCHAIN_URL}/transactions/new`, {
           sender: senderAddr,
           recipient: receiverAddr,
           amount: amountNum
         });
 
         // Mine a block to confirm the transaction and get a real hash
-        const mineResponse = await axios.get('http://localhost:5001/mine');
+        const mineResponse = await axios.get(`${BLOCKCHAIN_URL}/mine`);
         const block = mineResponse.data;
         txHash = block.pow_hash || block.previous_hash;
       } catch (error) {

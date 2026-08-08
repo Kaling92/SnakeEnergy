@@ -34,7 +34,7 @@ const Receive = () => {
         }
 
         // Fetching directly from the method added to your walletController
-        const res = await axios.get('http://localhost:5000/api/wallets/receive', {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/wallets/receive`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -84,7 +84,7 @@ const Receive = () => {
         return;
       }
 
-      const res = await axios.post('http://localhost:5000/api/wallets/fund', {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/wallets/fund`, {
         tokenSymbol: fundToken,
         amount: parseFloat(fundAmount)
       }, {

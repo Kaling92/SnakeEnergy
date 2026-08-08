@@ -36,7 +36,7 @@ const SignUp = () => {
     }
 
    try {
-      const res = await axios.post('http://localhost:5000/api/auth/signup', { 
+      const res = await axios.post(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/auth/signup`, { 
         username: email, 
         password: vaultKey, 
         fullName 
@@ -44,7 +44,7 @@ const SignUp = () => {
       
       if (res.data.success) {
         // Immediately establish a session so protected pages can load after WalletSuccess
-        const loginRes = await axios.post('http://localhost:5000/api/auth/login', {
+        const loginRes = await axios.post(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/auth/login`, {
           username: email,
           password: vaultKey
         });

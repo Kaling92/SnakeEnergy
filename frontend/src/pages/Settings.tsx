@@ -40,7 +40,7 @@ const Settings = () => {
           return;
         }
 
-        const res = await axios.get('http://localhost:5000/api/users/settings/advanced', {
+        const res = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/users/settings/advanced`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -68,7 +68,7 @@ const Settings = () => {
   const handleApplyChanges = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.put('http://localhost:5000/api/users/settings/advanced', {
+      const res = await axios.put(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/users/settings/advanced`, {
         language,
         displayCurrency: currency,
         motionProfile,

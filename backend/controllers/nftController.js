@@ -64,12 +64,13 @@ exports.mintNFT = async (req, res) => {
     // Log to python blockchain
     let txHash = new mongoose.Types.ObjectId().toString();
     try {
-      await axios.post('http://localhost:5001/transactions/new', {
+      const BLOCKCHAIN_URL = process.env.BLOCKCHAIN_URL || 'http://localhost:5001';
+      await axios.post(`${BLOCKCHAIN_URL}/transactions/new`, {
         sender: '0x0000000000000000000000000000000000000000',
         recipient: wallet.address || wallet.publicAddress,
         amount: 0 // NFTs are non-fungible, passing 0 amount for the blockchain logger
       });
-      const mineResponse = await axios.get('http://localhost:5001/mine');
+      const mineResponse = await axios.get(`${BLOCKCHAIN_URL}/mine`);
       txHash = mineResponse.data.pow_hash || mineResponse.data.previous_hash;
     } catch (e) {
       console.log('Blockchain logging failed, using local hash.', e.message);
@@ -122,12 +123,13 @@ exports.transferNFT = async (req, res) => {
     // Log to python blockchain
     let txHash = new mongoose.Types.ObjectId().toString();
     try {
-      await axios.post('http://localhost:5001/transactions/new', {
+      const BLOCKCHAIN_URL = process.env.BLOCKCHAIN_URL || 'http://localhost:5001';
+      await axios.post(`${BLOCKCHAIN_URL}/transactions/new`, {
         sender: senderWallet.address || senderWallet.publicAddress,
         recipient: receiverWallet.address || receiverWallet.publicAddress,
         amount: 0
       });
-      const mineResponse = await axios.get('http://localhost:5001/mine');
+      const mineResponse = await axios.get(`${BLOCKCHAIN_URL}/mine`);
       txHash = mineResponse.data.pow_hash || mineResponse.data.previous_hash;
     } catch (e) {
       console.log('Blockchain logging failed, using local hash.', e.message);

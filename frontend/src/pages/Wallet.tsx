@@ -32,7 +32,7 @@ const Wallet = () => {
   const fetchVaultData = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.get('http://localhost:5000/api/vaults', {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/vaults`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.data.success) {
@@ -62,7 +62,7 @@ const Wallet = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post('http://localhost:5000/api/vaults/add', {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/vaults/add`, {
         name: newVaultName,
         tag: newVaultTag
       }, {
