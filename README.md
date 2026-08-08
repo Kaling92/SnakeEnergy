@@ -8,28 +8,39 @@
 - [Node.js](https://nodejs.org/) (v14 or higher)
 - [npm](https://www.npmjs.com/)
 
-### Installation
+### Running the Application
 
-1. **Clone the repository** (if not already cloned):
-```bash
-git clone <repository-url>
-cd SnakeEnergy
-```
+This project consists of a React frontend and a Node.js backend which includes a simulated blockchain ledger for transactions.
 
-2. **Install dependencies**:
+#### 1. Backend & Blockchain Server
+To run both the Python Blockchain server and the Node.js Backend Server simultaneously, you can use the provided PowerShell script.
+
+First, install backend dependencies:
 ```bash
+cd backend
 npm install
 ```
 
-3. **Run the server**:
+Then run the startup script:
+```powershell
+.\start_backend.ps1
+```
+This script will open two separate terminal windows:
+- **Blockchain Server**: Runs on `http://localhost:5001` (from `c:\Users\HP\simple-blockchain`).
+- **Backend Server**: Runs on `http://localhost:5000` (Node.js API). It connects to a MongoDB database to persist data.
+
+#### 2. Frontend
+The frontend is built with React and Vite.
+
+In a new terminal window:
 ```bash
-node server.js
+cd frontend
+npm install
+npm run dev
 ```
 
-## 🖥️ Usage
-
-Open your browser and navigate to: http://localhost:3000
-
+#### 3. Usage
+Open your browser and navigate to the local URL provided by Vite (typically `http://localhost:5173`).
 
 ## 🚀 Key Features
 
