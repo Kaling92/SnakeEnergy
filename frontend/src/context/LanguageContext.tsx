@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-
+import { createContext, useContext } from "react";
+import type { ReactNode } from "react";
 type Language = 'EN' | 'VI';
 
 interface LanguageContextProps {
