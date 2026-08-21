@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import styles from '../assets/Homepage.module.css';
+import LanguageToggle from './LanguageToggle';
 
 const classes = (value: string) =>
   value
@@ -18,6 +19,13 @@ interface PageLayoutProps {
 
 const PageLayout: React.FC<PageLayoutProps> = ({ currentPage, topNotice, children }) => {
   const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = React.useState('');
+
+  const handleSearchKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && searchQuery.trim()) {
+      navigate(`/Search?query=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
 
   return (
     <div className={classes("app-body")}>
@@ -26,9 +34,9 @@ const PageLayout: React.FC<PageLayoutProps> = ({ currentPage, topNotice, childre
         {/* Shared top header */}
         <div className={classes("layoutRightHeader")}>
           <div className={classes("layoutRightHeaderLeft")}>
-            <input id="searchBar" type="text" placeholder="Search Assets, NFTs..." />
+            <input id="searchBar" type="text" placeholder="Search Assets, NFTs..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} onKeyDown={handleSearchKey} />
             <div className={classes("langSwitcher")}>
-              <button id="languageToggle">VI</button>
+              <LanguageToggle />
             </div>
           </div>
           <div className={classes("layoutRightHeaderRight")}>

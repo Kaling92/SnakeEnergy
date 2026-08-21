@@ -1,0 +1,18 @@
+/* Search page styling */
+
+.app-body {
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, hsl(210, 30%, 95%), hsl(210, 20%, 98%));
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: hsl(210, 30%, 20%);
+  font-size: 1.75rem;
+}
+
+p {
+  color: hsl(210, 10%, 40%);
+  line-height: 1.5;
+}

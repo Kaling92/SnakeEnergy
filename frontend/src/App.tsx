@@ -10,6 +10,7 @@ import NFT from './pages/NFT'
 import Assets from './pages/Assets'
 import ExploreVaults from './pages/ExploreVaults'
 import Analytics from './pages/Analytics'
+import Search from './pages/Search'
 import Notifications from './pages/Notifications'
 import Receive from './pages/Receive'
 import Security from './pages/Security'
@@ -33,7 +34,7 @@ function App() {
         <Route path="/Assets" element={<Assets />} />
         <Route path="/ExploreVaults" element={<ExploreVaults />} />
         <Route path="/Analytics" element={<Analytics />} />
-        <Route path="/Anlytics" element={<Navigate to="/Analytics" />} />
+        <Route path="/Search" element={<Search />} />
         <Route path="/Notifications" element={<Notifications />} />
         <Route path="/Receive" element={<Receive />} />
         <Route path="/Security" element={<Security />} />
